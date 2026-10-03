@@ -40,3 +40,8 @@
 .md-typeset table:not([class]) th .arithmatex {
   white-space: nowrap;
 }
+
+/* Math in the table of contents / nav: match link text size. */
+.md-nav__link mjx-container {
+  font-size: 100% !important;
+}
