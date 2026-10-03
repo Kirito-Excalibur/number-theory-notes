@@ -57,11 +57,17 @@ Consider the statement $n! \le 2^n$ for $n \ge 1$. Clearly the statement is fals
 
 *Solution.* Any integer $a$ has one of the forms $3k$, $3k+1$, $3k+2$.
 
-- If $a = 3k$, then $\frac{a(a^2+2)}{3} = k(9k^2 + 2) \in \mathbb{Z}$.
+- If $a = 3k$, then
 
-- If $a = 3k+1$, then $\frac{a(a^2+2)}{3} = (3k+1)(3k^2 + 2k + 1) \in \mathbb{Z}$.
+    $$\frac{a(a^2+2)}{3} = k(9k^2 + 2) \in \mathbb{Z}.$$
 
-- If $a = 3k+2$, then $\frac{a(a^2+2)}{3} = (3k+2)(3k^2 + 4k + 2) \in \mathbb{Z}$.
+- If $a = 3k+1$, then
+
+    $$\frac{a(a^2+2)}{3} = (3k+1)(3k^2 + 2k + 1) \in \mathbb{Z}.$$
+
+- If $a = 3k+2$, then
+
+    $$\frac{a(a^2+2)}{3} = (3k+2)(3k^2 + 4k + 2) \in \mathbb{Z}.$$
 
 ## Greatest Common Divisor (GCD)
 
@@ -76,9 +82,9 @@ Consider the statement $n! \le 2^n$ for $n \ge 1$. Clearly the statement is fals
 
 *Sketch.* $(\Leftarrow)$ is okay. $(\Rightarrow)$ By the division algorithm, $d = cq + r$, $0 \le r < c$. Assume $r > 0$. Write $a = dx$, $b = dy$ and $a = cz$, $b = cw$.
 
-- Observe that $\gcd(x, y) = 1$: if $d' = \gcd(x, y)$, then $dd'$ is a common divisor of $a$ and $b$, so $dd' \le d \Rightarrow d' \le 1 \Rightarrow d' = 1$ (since $d' > 0$).
+- Observe that $\gcd(x, y) = 1$: if $d' = \gcd(x, y)$, then $dd'$ is a common divisor of $a$ and $b$, so $dd' \le d$ $\Rightarrow d' \le 1$ $\Rightarrow d' = 1$ (since $d' > 0$).
 
-- Now $a = dx = (cq + r)x \Rightarrow c(z - xq) = rx \Rightarrow c \mid rx$. Similarly $c \mid ry$.
+- Now $a = dx = (cq + r)x$ $\Rightarrow c(z - xq) = rx$ $\Rightarrow c \mid rx$. Similarly $c \mid ry$.
 
 - Hence $c \le \gcd(rx, ry) = r\gcd(x, y) = r$, a contradiction since $r < c$. $\blacksquare$
 
@@ -97,7 +103,7 @@ $$S = \{au + bv \mid u, v \in \mathbb{Z} \text{ and } au + bv > 0\}.$$
 
 - *Claim:* $d = \gcd(a, b)$. Write $a = dq' + r$, $0 \le r < d$. Then $r = a - dq' = a(1 - pq') - b(qq')$. If $r > 0$ then $r \in S$, so $d \le r$, a contradiction; hence $r = 0$, i.e. $d \mid a$. Similarly $d \mid b$.
 
-- Now let $c \mid a$ and $c \mid b \Rightarrow a = cs$, $b = ct$. Then $d = ap + bq = c(sp + tq) \Rightarrow c \le d$.
+- Now let $c \mid a$ and $c \mid b \Rightarrow a = cs$, $b = ct$. Then $d = ap + bq = c(sp + tq)$ $\Rightarrow c \le d$.
 
 Hence $d = \gcd(a, b)$ by definition. $\blacksquare$
 
@@ -106,9 +112,9 @@ Hence $d = \gcd(a, b)$ by definition. $\blacksquare$
 !!! abstract "Theorem"
     Let $a, b \in \mathbb{Z}$, not both zero. Then $a$ and $b$ are relatively prime $\iff$ there exist integers $p, q$ such that $ap + bq = 1$.
 
-*Proof.* $(\Rightarrow)$ is immediate by the above theorem. $(\Leftarrow)$ Let $d = \gcd(a, b)$, so $a = du$ and $b = dv$. Then $ap + bq = 1 \Rightarrow d(up + vq) = 1 \Rightarrow d = 1$ (since $d > 0$). $\blacksquare$
+*Proof.* $(\Rightarrow)$ is immediate by the above theorem. $(\Leftarrow)$ Let $d = \gcd(a, b)$, so $a = du$ and $b = dv$. Then $ap + bq = 1$ $\Rightarrow d(up + vq) = 1$ $\Rightarrow d = 1$ (since $d > 0$). $\blacksquare$
 
-- **Corollary 1.** $\gcd(a, b) = d \Rightarrow \gcd\left(\frac{a}{d}, \frac{b}{d}\right) = 1$.
+- **Corollary 1.** $\gcd(a, b) = d$ $\Rightarrow \gcd\left(\frac{a}{d}, \frac{b}{d}\right) = 1$.
 
 - **Corollary 2.** $a \mid c$, $b \mid c$ with $\gcd(a, b) = 1 \Rightarrow ab \mid c$.
 
@@ -119,7 +125,7 @@ Hence $d = \gcd(a, b)$ by definition. $\blacksquare$
 !!! abstract "Lemma"
     If $a = bq + r$, then $\gcd(a, b) = \gcd(b, r)$.
 
-*Proof.* Let $d = \gcd(a, b)$. Then $d \mid a$, $d \mid b \Rightarrow d \mid a - bq \Rightarrow d \mid r$. If $c \mid b$ and $c \mid r$, then $c \mid a$, so $c \le d$ (since $d = \gcd(a, b)$). By definition, $d = \gcd(b, r)$. $\blacksquare$
+*Proof.* Let $d = \gcd(a, b)$. Then $d \mid a$, $d \mid b$ $\Rightarrow d \mid a - bq$ $\Rightarrow d \mid r$. If $c \mid b$ and $c \mid r$, then $c \mid a$, so $c \le d$ (since $d = \gcd(a, b)$). By definition, $d = \gcd(b, r)$. $\blacksquare$
 
 **Euclidean Algorithm.** Our objective is to find $x$ and $y$ such that $ax + by = \gcd(a, b)$. Without loss of generality assume $a > b$ and $b \nmid a$.
 
@@ -196,7 +202,12 @@ An equation of the form $ax + by = c$, with $a, b, c \in \mathbb{Z}$, is called 
 !!! abstract "Divisibility Theorem"
     The linear Diophantine equation $ax + by = c$ has a solution if and only if $\gcd(a, b) \mid c$. If $(x_0, y_0)$ is any particular solution of $ax + by = c$, then all the other solutions are given by (with $d = \gcd(a, b)$)
 
-    $$x = x_0 + \frac{b}{d} t, \qquad y = y_0 - \frac{a}{d} t, \qquad t \in \mathbb{Z}.$$
+    $$
+    \begin{gathered}
+    x = x_0 + \frac{b}{d} t, \\
+    y = y_0 - \frac{a}{d} t, \qquad t \in \mathbb{Z}.
+    \end{gathered}
+    $$
 
 **Corollary.** If $\gcd(a, b) = 1$, then $ax + by = c$ has an integer solution. If $(x_0, y_0)$ is a particular solution, then all solutions are given by $x = x_0 + bt$, $y = y_0 - at$, $t \in \mathbb{Z}$.
 
@@ -217,7 +228,7 @@ An equation of the form $ax + by = c$, with $a, b, c \in \mathbb{Z}$, is called 
 
 - **Corollary 1.** If $p$ is a prime and $p \mid a_1 \cdots a_n$, then $p \mid a_k$ for some $1 \le k \le n$.
 
-- **Corollary 2.** If $p, a_1, \ldots, a_n$ are all prime, then $p \mid a_1 \cdots a_n \Rightarrow p = a_k$ for some $1 \le k \le n$.
+- **Corollary 2.** If $p, a_1, \ldots, a_n$ are all prime, then $p \mid a_1 \cdots a_n$ $\Rightarrow p = a_k$ for some $1 \le k \le n$.
 
 !!! abstract "Theorem (Fundamental Theorem of Arithmetic)"
     Every positive integer $n > 1$ is either a prime or a product of primes; this representation is unique, apart from the order in which the factors occur. That is,
@@ -228,7 +239,13 @@ An equation of the form $ax + by = c$, with $a, b, c \in \mathbb{Z}$, is called 
 
 **Exercise.** Let $m = p_1^{\alpha_1} \cdots p_r^{\alpha_r}$ and $n = p_1^{\beta_1} \cdots p_r^{\beta_r}$. Show that
 
-$$\gcd(m, n) = \prod_{i=1}^{r} p_i^{\min\{\alpha_i, \beta_i\}} \quad\text{and}\quad \operatorname{lcm}(m, n) = \prod_{i=1}^{r} p_i^{\max\{\alpha_i, \beta_i\}}.$$
+$$
+\begin{gathered}
+\gcd(m, n) = \prod_{i=1}^{r} p_i^{\min\{\alpha_i, \beta_i\}} \\
+\text{and} \\
+\operatorname{lcm}(m, n) = \prod_{i=1}^{r} p_i^{\max\{\alpha_i, \beta_i\}}.
+\end{gathered}
+$$
 
 !!! abstract "Theorem (Euclid)"
     There are infinitely many primes.
@@ -246,7 +263,11 @@ $$\varphi(1) = 1,\ \varphi(2) = 1,\ \varphi(3) = 2,\ \varphi(4) = 2,\ \varphi(5)
 !!! abstract "Lemma"
     If $m$ and $n$ are relatively prime, then $\varphi(mn) = \varphi(m)\varphi(n)$.
 
-*Proof.* $\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|$. Note that $\gcd(k, mn) = 1 \iff \gcd(k, m) = 1$ and $\gcd(k, n) = 1$. Arrange the numbers as an $m \times n$ array:
+*Proof.*
+
+$$\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|.$$
+
+Note that $\gcd(k, mn) = 1 \iff \gcd(k, m) = 1$ and $\gcd(k, n) = 1$. Arrange the numbers as an $m \times n$ array:
 
 | $1$ | $2$ | $3$ | $\cdots$ | $n$ |
 | :-: | :-: | :-: | :-: | :-: |
@@ -258,7 +279,7 @@ $$\varphi(1) = 1,\ \varphi(2) = 1,\ \varphi(3) = 2,\ \varphi(4) = 2,\ \varphi(5)
 
 - Fix one such column, i.e. fix $r$ such that $\gcd(r, n) = 1$. We check how many elements in this column are coprime to $m$ as well.
 
-- For two different elements $k_1 n + r$ and $k_2 n + r$, write $k_1 n + r = mq_1 + r_1$ and $k_2 n + r = mq_2 + r_2$. If $r_1 = r_2$, then $m \mid (k_1 - k_2)n \Rightarrow m \mid k_1 - k_2$ (since $\gcd(m, n) = 1$) $\Rightarrow k_1 = k_2$.
+- For two different elements $k_1 n + r$ and $k_2 n + r$, write $k_1 n + r = mq_1 + r_1$ and $k_2 n + r = mq_2 + r_2$. If $r_1 = r_2$, then $m \mid (k_1 - k_2)n$ $\Rightarrow m \mid k_1 - k_2$ (since $\gcd(m, n) = 1$) $\Rightarrow k_1 = k_2$.
 
 - Therefore, upon division by $m$, the elements $r, n + r, \ldots, (m-1)n + r$ produce different remainders. If $kn + r = mq + r_1$, then $\gcd(kn + r, m) = \gcd(r_1, m)$.
 
@@ -269,7 +290,7 @@ That is, $\varphi(mn) = \varphi(m)\varphi(n)$. $\blacksquare$
 !!! abstract "Lemma"
     If $p$ is prime, then $\varphi(p^\alpha) = p^\alpha - p^{\alpha - 1}$.
 
-*Proof.* $\gcd(k, p^\alpha) \ne 1 \iff p \mid k \iff k = pt$ for some $1 \le t \le p^{\alpha-1}$. Therefore $\varphi(p^\alpha) = p^\alpha - p^{\alpha-1}$. $\blacksquare$
+*Proof.* $\gcd(k, p^\alpha) \ne 1$ $\iff p \mid k$ $\iff k = pt$ for some $1 \le t \le p^{\alpha-1}$. Therefore $\varphi(p^\alpha) = p^\alpha - p^{\alpha-1}$. $\blacksquare$
 
 !!! abstract "Theorem"
     If $n \ge 1$, then
@@ -291,7 +312,7 @@ $$
 
     1. If $d = \gcd(m, n)$, then $\varphi(mn) = \varphi(m)\varphi(n)\left(\dfrac{d}{\varphi(d)}\right)$.
 
-    2. $a \mid b \Rightarrow \varphi(a) \mid \varphi(b)$.
+    2. $a \mid b$ $\Rightarrow \varphi(a) \mid \varphi(b)$.
 
     3. If $n \ge 3$, $\varphi(n)$ is even.
 
@@ -302,9 +323,9 @@ $$
 
 $$S = \bigsqcup_{d \mid n} A(d) \;\Rightarrow\; n = \sum_{d \mid n} |A(d)|.$$
 
-Now $\gcd(k, n) = d \iff \gcd\left(\frac{k}{d}, \frac{n}{d}\right) = 1 \Rightarrow |A(d)| = \varphi\left(\frac{n}{d}\right)$. So
+Now $\gcd(k, n) = d$ $\iff \gcd\left(\frac{k}{d}, \frac{n}{d}\right) = 1$ $\Rightarrow |A(d)| = \varphi\left(\frac{n}{d}\right)$. So
 
-$$n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(d). \qquad \blacksquare$$
+$$n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(d). \quad \blacksquare$$
 
 ### The Möbius function
 
@@ -362,11 +383,18 @@ $$
 
 ### Other number-theoretic functions: $\sigma(n)$ and $\tau(n)$
 
-$$\tau(n) = \sum_{d \mid n} 1 = \text{number of positive divisors of } n, \qquad \sigma(n) = \sum_{d \mid n} d = \text{sum of all positive divisors of } n.$$
+- $\tau(n) = \sum_{d \mid n} 1$ = number of positive divisors of $n$.
+
+- $\sigma(n) = \sum_{d \mid n} d$ = sum of all positive divisors of $n$.
 
 !!! abstract "Proposition"
     If $n = p_1^{\alpha_1} \cdots p_r^{\alpha_r}$, then
 
-    $$\tau(n) = (\alpha_1 + 1)(\alpha_2 + 1) \cdots (\alpha_r + 1), \qquad \sigma(n) = \frac{p_1^{\alpha_1+1} - 1}{p_1 - 1} \cdot \frac{p_2^{\alpha_2+1} - 1}{p_2 - 1} \cdots \frac{p_r^{\alpha_r+1} - 1}{p_r - 1}.$$
+    $$
+    \begin{gathered}
+    \tau(n) = (\alpha_1 + 1)(\alpha_2 + 1) \cdots (\alpha_r + 1), \\
+    \sigma(n) = \frac{p_1^{\alpha_1+1} - 1}{p_1 - 1} \cdot \frac{p_2^{\alpha_2+1} - 1}{p_2 - 1} \cdots \frac{p_r^{\alpha_r+1} - 1}{p_r - 1}.
+    \end{gathered}
+    $$
 
     In particular, both $\sigma$ and $\tau$ are multiplicative.

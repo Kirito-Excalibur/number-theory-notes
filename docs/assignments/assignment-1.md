@@ -46,7 +46,12 @@ In these exercises lower case Latin letters $a, b, c, \ldots, x, y, z$ represent
 
 11. Given $x$ and $y$, let
 
-    $$m = ax + by, \qquad n = cx + dy,$$
+    $$
+    \begin{gathered}
+    m = ax + by, \\
+    n = cx + dy,
+    \end{gathered}
+    $$
 
     where $ad - bc = \pm 1$. Prove that $\gcd(m, n) = \gcd(x, y)$.
 

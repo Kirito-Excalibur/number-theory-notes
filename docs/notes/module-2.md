@@ -12,9 +12,9 @@
 
 - $a \equiv b \pmod 1$ for all $a, b \in \mathbb{Z}$.
 
-- $a \equiv b \pmod m \Rightarrow a \equiv b \pmod d$ for $d \mid m$.
+- $a \equiv b \pmod m$ $\Rightarrow a \equiv b \pmod d$ for $d \mid m$.
 
-- $a \equiv 0 \pmod m \iff m \mid a$; $\ a \equiv b \pmod m \iff a - b \equiv 0 \pmod m$.
+- $a \equiv 0 \pmod m \iff m \mid a$; $\ a \equiv b \pmod m$ $\iff a - b \equiv 0 \pmod m$.
 
 When $a \not\equiv b \pmod m$, we say $a$ and $b$ are *incongruent* mod $m$.
 
@@ -25,18 +25,18 @@ When $a \not\equiv b \pmod m$, we say $a$ and $b$ are *incongruent* mod $m$.
 
 - **Reflexive:** $a \equiv a \pmod m$ for all $a \in \mathbb{Z}$.
 
-- **Symmetric:** $a \equiv b \pmod m \Rightarrow m \mid a - b \Rightarrow m \mid b - a \Rightarrow b \equiv a \pmod m$.
+- **Symmetric:** $a \equiv b \pmod m$ $\Rightarrow m \mid a - b$ $\Rightarrow m \mid b - a$ $\Rightarrow b \equiv a \pmod m$.
 
-- **Transitive:** $a \equiv b \pmod m$ and $b \equiv c \pmod m \Rightarrow m \mid a - b$ and $m \mid b - c \Rightarrow m \mid (a - b) + (b - c) \Rightarrow a \equiv c \pmod m$. $\blacksquare$
+- **Transitive:** $a \equiv b \pmod m$ and $b \equiv c \pmod m$ $\Rightarrow m \mid a - b$ and $m \mid b - c$ $\Rightarrow m \mid (a - b) + (b - c)$ $\Rightarrow a \equiv c \pmod m$. $\blacksquare$
 
 Thus the equivalence relation yields a partition of $\mathbb{Z}$. Each of the parts is called a *residue class*. For $a \in \mathbb{Z}$, the residue class of $a$ is denoted by $\bar a$.
 
 !!! abstract "Lemma"
     There exist exactly $m$ distinct residue classes, given by $\bar 0, \bar 1, \ldots, \overline{m-1}$.
 
-*Proof.* If $0 \le a, b \le m - 1$ and $a \ne b$, then $m \nmid a - b \Rightarrow a \not\equiv b \pmod m$. So all the residue classes $\bar 0, \bar 1, \ldots, \overline{m-1}$ are distinct.
+*Proof.* If $0 \le a, b \le m - 1$ and $a \ne b$, then $m \nmid a - b$ $\Rightarrow a \not\equiv b \pmod m$. So all the residue classes $\bar 0, \bar 1, \ldots, \overline{m-1}$ are distinct.
 
-Now suppose $a \in \mathbb{Z}$. By the division algorithm, $a = qm + r$ where $0 \le r < m$, so $a \equiv r \pmod m \Rightarrow \bar a = \bar r$ (the classes $\bar a$ and $\bar r$ are the same), i.e. $\bar a \in \{\bar 0, \bar 1, \ldots, \overline{m-1}\}$. This finishes the proof. $\blacksquare$
+Now suppose $a \in \mathbb{Z}$. By the division algorithm, $a = qm + r$ where $0 \le r < m$, so $a \equiv r \pmod m$ $\Rightarrow \bar a = \bar r$ (the classes $\bar a$ and $\bar r$ are the same), i.e. $\bar a \in \{\bar 0, \bar 1, \ldots, \overline{m-1}\}$. This finishes the proof. $\blacksquare$
 
 Denote the set $\{\bar 0, \bar 1, \ldots, \overline{m-1}\}$ by $\mathbb{Z}_m$ or $\mathbb{Z}/m\mathbb{Z}$. Then $\mathbb{Z}_m$ is an abelian group under the operation $\bar a + \bar b = \overline{a + b}$.
 
@@ -130,8 +130,9 @@ x &\equiv c_1 \pmod{n_1} \\
 &\;\;\vdots \\
 x &\equiv c_r \pmod{n_r}
 \end{aligned}
-\qquad \text{where } n_k = \frac{m_k}{d_k}.
 $$
+
+where $n_k = \dfrac{m_k}{d_k}$.
 
 Now consider the situation where $n_1, \ldots, n_r$ are not pairwise prime; WLOG assume $\gcd(n_1, n_2) = d_{12} > 1$. Then a common solution of $x \equiv c_1 \pmod{n_1}$, $x \equiv c_2 \pmod{n_2}$ will be a solution to $x \equiv c_1 \pmod{d_{12}}$ and $x \equiv c_2 \pmod{d_{12}}$, so $c_1 \equiv c_2 \pmod{d_{12}}$. This is a strong condition on the system $(*)$.
 
@@ -144,15 +145,16 @@ x &\equiv c_1 \pmod{n_1} \\
 &\;\;\vdots \\
 x &\equiv c_r \pmod{n_r}
 \end{aligned}
-\qquad \text{with } \gcd(n_i, n_j) = 1 \text{ for } i \ne j.
 $$
+
+with $\gcd(n_i, n_j) = 1$ for $i \ne j$.
 
 !!! abstract "Chinese Remainder Theorem"
     The system of linear congruences $(**)$ has a solution, and the solution is unique modulo $n_1 \cdots n_r$.
 
 *Construction of the solution.* Let $n = n_1 n_2 \cdots n_r$ and $N_k = \dfrac{n}{n_k}$.
 
-- Clearly $N_k x \equiv 1 \pmod{n_k}$ has a unique solution, say $x_k$; i.e. $N_k x_k \equiv 1 \pmod{n_k} \Rightarrow c_k N_k x_k \equiv c_k \pmod{n_k}$.
+- Clearly $N_k x \equiv 1 \pmod{n_k}$ has a unique solution, say $x_k$; i.e. $N_k x_k \equiv 1 \pmod{n_k}$ $\Rightarrow c_k N_k x_k \equiv c_k \pmod{n_k}$.
 
 - Let $x = c_1 N_1 x_1 + \cdots + c_r N_r x_r$. Then $x \equiv c_k N_k x_k \equiv c_k \pmod{n_k}$ for each $k$.
 
@@ -176,7 +178,17 @@ $$
 | $21x \equiv 1 \pmod 5$ | $x_2 = 1$ |
 | $15x \equiv 1 \pmod 7$ | $x_3 = 1$ |
 
-So $x = c_1 N_1 x_1 + c_2 N_2 x_2 + c_3 N_3 x_3 = 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 = 233$. Therefore the system has the unique solution $233 \equiv 23 \pmod{105}$.
+So
+
+$$
+\begin{aligned}
+x &= c_1 N_1 x_1 + c_2 N_2 x_2 + c_3 N_3 x_3 \\
+&= 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 \\
+&= 233.
+\end{aligned}
+$$
+
+Therefore the system has the unique solution $233 \equiv 23 \pmod{105}$.
 
 ## Fermat's Little Theorem
 
@@ -287,15 +299,21 @@ By Fermat's theorem we know that if $\gcd(a, n) = 1$, then $a^{\varphi(n)} \equi
 
 *Proof.* By the division algorithm, $h = kq + r$ with $0 \le r < k$. Then
 
-$$a^h \equiv (a^k)^q \cdot a^r \pmod n \Rightarrow a^r \equiv 1 \pmod n \Rightarrow r = 0. \qquad \blacksquare$$
+$$
+\begin{aligned}
+a^h &\equiv (a^k)^q \cdot a^r \pmod n \\
+\Rightarrow\; a^r &\equiv 1 \pmod n \\
+\Rightarrow\; r &= 0. \quad \blacksquare
+\end{aligned}
+$$
 
-**Corollary.** If $a$ has order $k$ modulo $n$, then $a^i \equiv a^j \pmod n \iff i \equiv j \pmod k$.
+**Corollary.** If $a$ has order $k$ modulo $n$, then $a^i \equiv a^j \pmod n$ $\iff i \equiv j \pmod k$.
 
-*Proof.* For $i \ge j$: $a^i \equiv a^j \pmod n \iff a^{i-j} \equiv 1 \pmod n \iff k \mid i - j \iff i \equiv j \pmod k$. $\blacksquare$
+*Proof.* For $i \ge j$: $a^i \equiv a^j \pmod n$ $\iff a^{i-j} \equiv 1 \pmod n$ $\iff k \mid i - j$ $\iff i \equiv j \pmod k$. $\blacksquare$
 
 **Corollary.** If $a$ has order $k$ modulo $n$, then the integers $a, a^2, \ldots, a^k$ are incongruent modulo $n$.
 
-*Proof.* For $1 \le i, j \le k$: $a^i \equiv a^j \pmod n \iff k \mid i - j \iff i = j$. $\blacksquare$
+*Proof.* For $1 \le i, j \le k$: $a^i \equiv a^j \pmod n$ $\iff k \mid i - j$ $\iff i = j$. $\blacksquare$
 
 !!! abstract "Proposition"
     If the integer $a$ has order $k$ modulo $n$ and $h > 0$, then $a^h$ has order $\dfrac{k}{\gcd(h, k)}$ modulo $n$.
@@ -304,7 +322,7 @@ $$a^h \equiv (a^k)^q \cdot a^r \pmod n \Rightarrow a^r \equiv 1 \pmod n \Rightar
 
 - $(a^h)^{k_1} = a^{dh_1 k_1} \equiv (a^k)^{h_1} \equiv 1 \pmod n$. Let $a^h$ have order $r$ modulo $n$; then $r \mid k_1$.
 
-- Now $(a^h)^r \equiv 1 \pmod n \Rightarrow k \mid hr \Rightarrow dk_1 \mid dh_1 r \Rightarrow k_1 \mid h_1 r \Rightarrow k_1 \mid r$ (since $\gcd(h_1, k_1) = 1$).
+- Now $(a^h)^r \equiv 1 \pmod n$ $\Rightarrow k \mid hr$ $\Rightarrow dk_1 \mid dh_1 r$ $\Rightarrow k_1 \mid h_1 r$ $\Rightarrow k_1 \mid r$ (since $\gcd(h_1, k_1) = 1$).
 
 - Therefore $r = k_1$. $\blacksquare$
 
@@ -321,16 +339,25 @@ $$a^h \equiv (a^k)^q \cdot a^r \pmod n \Rightarrow a^r \equiv 1 \pmod n \Rightar
 
 *Proof.* $\gcd(a^i, n) = 1$ for all $i \ge 1$, so $\bar a^i \in \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}$ for all $i \ge 1$. Since $\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}$ are incongruent, i.e. $\bar a^i \ne \bar a^j$ for $1 \le i < j \le \varphi(n)$,
 
-$$\{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} \subseteq \{\bar a_1, \ldots, \bar a_{\varphi(n)}\} \Rightarrow \{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} = \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}. \qquad \blacksquare$$
+$$
+\begin{gathered}
+\{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} \subseteq \{\bar a_1, \ldots, \bar a_{\varphi(n)}\} \\
+\Rightarrow\; \{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} = \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}. \quad \blacksquare
+\end{gathered}
+$$
 
 **Corollary.** If $n$ has a primitive root, then the total number of primitive roots is $\varphi(\varphi(n))$.
 
 !!! abstract "Theorem"
     If $p$ is a prime number and $d \mid p - 1$, then there are exactly $\varphi(d)$ incongruent integers having order $d$ modulo $p$.
 
-*Proof.* Let $\psi(d) = \bigl|\{k \mid 1 \le k \le p - 1 \text{ and } k \text{ has order } d \text{ modulo } p\}\bigr|$. Then
+*Proof.* Let $\psi(d)$ be the number of $k$ with $1 \le k \le p - 1$ such that $k$ has order $d$ modulo $p$. Then
 
-$$p - 1 = \sum_{d \mid p-1} \psi(d), \qquad \text{and by Gauss,} \qquad p - 1 = \sum_{d \mid p-1} \varphi(d).$$
+$$p - 1 = \sum_{d \mid p-1} \psi(d),$$
+
+and by Gauss,
+
+$$p - 1 = \sum_{d \mid p-1} \varphi(d).$$
 
 Therefore
 
