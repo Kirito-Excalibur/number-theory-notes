@@ -1,0 +1,48 @@
+site_name: MA502 Number Theory
+site_description: Lecture notes and assignments for MA502 Number Theory (BIT Mesra, MO-2026)
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Notes:
+      - "Module 1: Divisibility & Arithmetic Functions": notes/module-1.md
+      - "Module 2: Congruences & Primitive Roots": notes/module-2.md
+  - Assignments:
+      - "Assignment 1 (Module I)": assignments/assignment-1.md
+      - "Assignment 2 (Module II)": assignments/assignment-2.md
