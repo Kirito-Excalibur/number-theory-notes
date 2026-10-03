@@ -134,27 +134,56 @@ Hence $d = \gcd(a, b)$ by definition. $\blacksquare$
 
 **Example 1.** $12x + 30y = 6$, with $\gcd(12, 30) = 6$.
 
-$$30 = 2 \cdot 12 + 6, \quad 12 = 2 \cdot 6 + 0 \;\Rightarrow\; 6 = 12 \cdot (-2) + 30 \cdot 1,$$
+$$
+\begin{aligned}
+30 &= 2 \cdot 12 + 6 \\
+12 &= 2 \cdot 6 + 0
+\end{aligned}
+\;\Rightarrow\; 6 = 12 \cdot (-2) + 30 \cdot 1,
+$$
 
 i.e. $x = -2$, $y = 1$.
 
 **Example 2.** $17x + 7y = 1$.
 
-$$17 = 2 \cdot 7 + 3, \quad 7 = 2 \cdot 3 + 1, \quad 3 = 3 \cdot 1.$$
+$$
+\begin{aligned}
+17 &= 2 \cdot 7 + 3 \\
+7 &= 2 \cdot 3 + 1 \\
+3 &= 3 \cdot 1
+\end{aligned}
+$$
 
-$$1 = 7 - 2 \cdot 3 = 7 - 2(17 - 2 \cdot 7) = (-2) \cdot 17 + 5 \cdot 7,$$
+$$
+\begin{aligned}
+1 &= 7 - 2 \cdot 3 \\
+&= 7 - 2(17 - 2 \cdot 7) \\
+&= (-2) \cdot 17 + 5 \cdot 7,
+\end{aligned}
+$$
 
 so $x = -2$, $y = 5$.
 
 **Example 3.** $35x + 22y = 1$, with $\gcd(35, 22) = 1$.
 
-$$35 = 1 \cdot 22 + 13, \quad 22 = 1 \cdot 13 + 9, \quad 13 = 1 \cdot 9 + 4, \quad 9 = 2 \cdot 4 + 1, \quad 4 = 4 \cdot 1 + 0.$$
+$$
+\begin{aligned}
+35 &= 1 \cdot 22 + 13 \\
+22 &= 1 \cdot 13 + 9 \\
+13 &= 1 \cdot 9 + 4 \\
+9 &= 2 \cdot 4 + 1 \\
+4 &= 4 \cdot 1 + 0
+\end{aligned}
+$$
 
 $$
 \begin{aligned}
-1 &= 9 - 2 \cdot 4 = 9 - 2(13 - 1 \cdot 9) = 3 \cdot 9 - 2 \cdot 13 \\
-  &= 3(22 - 1 \cdot 13) - 2 \cdot 13 = 3 \cdot 22 - 5 \cdot 13 \\
-  &= 3 \cdot 22 - 5(1 \cdot 35 - 1 \cdot 22) = (-5) \cdot 35 + 8 \cdot 22,
+1 &= 9 - 2 \cdot 4 \\
+  &= 9 - 2(13 - 1 \cdot 9) = 3 \cdot 9 - 2 \cdot 13 \\
+  &= 3(22 - 1 \cdot 13) - 2 \cdot 13 \\
+  &= 3 \cdot 22 - 5 \cdot 13 \\
+  &= 3 \cdot 22 - 5(1 \cdot 35 - 1 \cdot 22) \\
+  &= (-5) \cdot 35 + 8 \cdot 22,
 \end{aligned}
 $$
 
@@ -219,14 +248,11 @@ $$\varphi(1) = 1,\ \varphi(2) = 1,\ \varphi(3) = 2,\ \varphi(4) = 2,\ \varphi(5)
 
 *Proof.* $\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|$. Note that $\gcd(k, mn) = 1 \iff \gcd(k, m) = 1$ and $\gcd(k, n) = 1$. Arrange the numbers as an $m \times n$ array:
 
-$$
-\begin{array}{ccccc}
-1 & 2 & 3 & \cdots & n \\
-n+1 & n+2 & n+3 & \cdots & 2n \\
-\vdots & \vdots & \vdots & & \vdots \\
-(m-1)n+1 & (m-1)n+2 & (m-1)n+3 & \cdots & mn
-\end{array}
-$$
+| $1$ | $2$ | $3$ | $\cdots$ | $n$ |
+| :-: | :-: | :-: | :-: | :-: |
+| $n+1$ | $n+2$ | $n+3$ | $\cdots$ | $2n$ |
+| $\vdots$ | $\vdots$ | $\vdots$ | | $\vdots$ |
+| $(m-1)n+1$ | $(m-1)n+2$ | $(m-1)n+3$ | $\cdots$ | $mn$ |
 
 - The $k$th row's elements are of the form $kn + r$, and $\gcd(kn + r, n) = \gcd(r, n)$. So there are $\varphi(n)$ columns of the array such that $\gcd(kn + r, n) = 1$ for all $0 \le k \le m - 1$.
 
@@ -254,8 +280,10 @@ That is, $\varphi(mn) = \varphi(m)\varphi(n)$. $\blacksquare$
 
 $$
 \begin{aligned}
-\varphi(n) &= \varphi(p_1^{\alpha_1}) \cdots \varphi(p_r^{\alpha_r}) = (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_r^{\alpha_r} - p_r^{\alpha_r - 1}) \\
-&= p_1^{\alpha_1}\left(1 - \tfrac{1}{p_1}\right) \cdots p_r^{\alpha_r}\left(1 - \tfrac{1}{p_r}\right) = n\left(1 - \tfrac{1}{p_1}\right)\left(1 - \tfrac{1}{p_2}\right) \cdots \left(1 - \tfrac{1}{p_r}\right). \qquad \blacksquare
+\varphi(n) &= \varphi(p_1^{\alpha_1}) \cdots \varphi(p_r^{\alpha_r}) \\
+&= (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_r^{\alpha_r} - p_r^{\alpha_r - 1}) \\
+&= p_1^{\alpha_1}\left(1 - \tfrac{1}{p_1}\right) \cdots p_r^{\alpha_r}\left(1 - \tfrac{1}{p_r}\right) \\
+&= n\left(1 - \tfrac{1}{p_1}\right)\left(1 - \tfrac{1}{p_2}\right) \cdots \left(1 - \tfrac{1}{p_r}\right). \quad \blacksquare
 \end{aligned}
 $$
 
@@ -280,14 +308,21 @@ $$n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(
 
 ### The Möbius function
 
+$\mu(1) = 1$. For $n > 1$, if $n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}$, then
+
 $$
-\mu(1) = 1; \qquad \text{for } n > 1,\ n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}: \quad
-\mu(n) = \begin{cases} (-1)^k & \text{if } \alpha_1 = \alpha_2 = \cdots = \alpha_k = 1, \\ 0 & \text{otherwise.} \end{cases}
+\mu(n) = \begin{cases} (-1)^k & \text{if } \alpha_1 = \cdots = \alpha_k = 1, \\ 0 & \text{otherwise.} \end{cases}
 $$
 
-| $n$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| $\mu(n)$ | 1 | −1 | −1 | 0 | −1 | 1 | −1 |
+| $n$ | $\mu(n)$ |
+| :-: | :-: |
+| 1 | 1 |
+| 2 | −1 |
+| 3 | −1 |
+| 4 | 0 |
+| 5 | −1 |
+| 6 | 1 |
+| 7 | −1 |
 
 !!! abstract "Theorem"
     If $n \ge 1$,
@@ -298,8 +333,11 @@ $$
 
 $$
 \begin{aligned}
-\sum_{d \mid n} \mu(d) &= \mu(1) + \mu(p_1) + \cdots + \mu(p_k) + \mu(p_1 p_2) + \cdots + \mu(p_{k-1} p_k) + \cdots + \mu(p_1 \cdots p_k) \\
-&= 1 + \binom{k}{1}(-1) + \binom{k}{2}(1) + \cdots + \binom{k}{k}(-1)^k = (1 - 1)^k = 0. \qquad \blacksquare
+\sum_{d \mid n} \mu(d) &= \mu(1) + \mu(p_1) + \cdots + \mu(p_k) \\
+&\quad + \mu(p_1 p_2) + \cdots + \mu(p_{k-1} p_k) \\
+&\quad + \cdots + \mu(p_1 \cdots p_k) \\
+&= 1 + \binom{k}{1}(-1) + \binom{k}{2}(1) + \cdots + \binom{k}{k}(-1)^k \\
+&= (1 - 1)^k = 0. \quad \blacksquare
 \end{aligned}
 $$
 
@@ -310,8 +348,10 @@ $$
 
 $$
 \begin{aligned}
-\varphi(n) &= \sum_{k=1}^{n} \left\lfloor \frac{1}{\gcd(k, n)} \right\rfloor = \sum_{k=1}^{n} \sum_{d \mid \gcd(k, n)} \mu(d) = \sum_{k=1}^{n} \sum_{\substack{d \mid k \\ d \mid n}} \mu(d) \\
-&= \sum_{d \mid n} \sum_{\substack{1 \le k \le n \\ d \mid k}} \mu(d) = \sum_{d \mid n} \mu(d) \, \bigl|\{k : 1 \le k \le n,\ d \mid k\}\bigr| = \sum_{d \mid n} \mu(d) \frac{n}{d}. \qquad \blacksquare
+\varphi(n) &= \sum_{k=1}^{n} \left\lfloor \frac{1}{\gcd(k, n)} \right\rfloor = \sum_{k=1}^{n} \sum_{d \mid \gcd(k, n)} \mu(d) \\
+&= \sum_{k=1}^{n} \sum_{\substack{d \mid k \\ d \mid n}} \mu(d) = \sum_{d \mid n} \sum_{\substack{1 \le k \le n \\ d \mid k}} \mu(d) \\
+&= \sum_{d \mid n} \mu(d) \, \bigl|\{k : 1 \le k \le n,\ d \mid k\}\bigr| \\
+&= \sum_{d \mid n} \mu(d) \frac{n}{d}. \quad \blacksquare
 \end{aligned}
 $$
 

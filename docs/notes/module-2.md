@@ -112,17 +112,40 @@ This completes the proof. $\blacksquare$
 
 Suppose we want to solve the system of linear congruences
 
-$$a_1 x \equiv b_1 \pmod{m_1}, \quad a_2 x \equiv b_2 \pmod{m_2}, \quad \ldots, \quad a_r x \equiv b_r \pmod{m_r}.$$
+$$
+\begin{aligned}
+a_1 x &\equiv b_1 \pmod{m_1} \\
+a_2 x &\equiv b_2 \pmod{m_2} \\
+&\;\;\vdots \\
+a_r x &\equiv b_r \pmod{m_r}
+\end{aligned}
+$$
 
 The system admits no solution unless each individual congruence is solvable. Let $d_k = \gcd(a_k, m_k)$ with $d_k \mid b_k$. This leads us to solve the system
 
-$$(*) \qquad x \equiv c_1 \pmod{n_1}, \;\ldots,\; x \equiv c_r \pmod{n_r}, \qquad \text{where } n_k = \frac{m_k}{d_k}.$$
+$$
+(*) \qquad
+\begin{aligned}
+x &\equiv c_1 \pmod{n_1} \\
+&\;\;\vdots \\
+x &\equiv c_r \pmod{n_r}
+\end{aligned}
+\qquad \text{where } n_k = \frac{m_k}{d_k}.
+$$
 
 Now consider the situation where $n_1, \ldots, n_r$ are not pairwise prime; WLOG assume $\gcd(n_1, n_2) = d_{12} > 1$. Then a common solution of $x \equiv c_1 \pmod{n_1}$, $x \equiv c_2 \pmod{n_2}$ will be a solution to $x \equiv c_1 \pmod{d_{12}}$ and $x \equiv c_2 \pmod{d_{12}}$, so $c_1 \equiv c_2 \pmod{d_{12}}$. This is a strong condition on the system $(*)$.
 
 The situation is better if we assume $d_{12} = 1$, i.e. all of $n_1, \ldots, n_r$ are pairwise coprime. Thus we have the following system of linear congruences:
 
-$$(**) \qquad x \equiv c_1 \pmod{n_1}, \;\ldots,\; x \equiv c_r \pmod{n_r}, \qquad \gcd(n_i, n_j) = 1 \text{ for } i \ne j.$$
+$$
+(**) \qquad
+\begin{aligned}
+x &\equiv c_1 \pmod{n_1} \\
+&\;\;\vdots \\
+x &\equiv c_r \pmod{n_r}
+\end{aligned}
+\qquad \text{with } \gcd(n_i, n_j) = 1 \text{ for } i \ne j.
+$$
 
 !!! abstract "Chinese Remainder Theorem"
     The system of linear congruences $(**)$ has a solution, and the solution is unique modulo $n_1 \cdots n_r$.
@@ -137,7 +160,13 @@ $$(**) \qquad x \equiv c_1 \pmod{n_1}, \;\ldots,\; x \equiv c_r \pmod{n_r}, \qqu
 
 **Example.** Solve
 
-$$x \equiv 2 \pmod 3, \qquad x \equiv 3 \pmod 5, \qquad x \equiv 2 \pmod 7.$$
+$$
+\begin{aligned}
+x &\equiv 2 \pmod 3 \\
+x &\equiv 3 \pmod 5 \\
+x &\equiv 2 \pmod 7
+\end{aligned}
+$$
 
 *Solution.* $n = 3 \cdot 5 \cdot 7 = 105$; $N_1 = 35$, $N_2 = 21$, $N_3 = 15$. Now we solve:
 
@@ -156,17 +185,24 @@ So $x = c_1 N_1 x_1 + c_2 N_2 x_2 + c_3 N_3 x_3 = 2 \cdot 35 \cdot 2 + 3 \cdot 2
 
 *Proof.* Let $S = \{\bar k \in \mathbb{Z}_m \mid \gcd(k, m) = 1\}$. Then
 
-$$\bar k \in S \iff \gcd(k, m) = 1 \iff \gcd(ak, m) = 1 \;[\because \gcd(a, m) = 1] \iff \overline{ak} \in S.$$
+$$
+\begin{aligned}
+\bar k \in S &\iff \gcd(k, m) = 1 \\
+&\iff \gcd(ak, m) = 1 \quad [\because \gcd(a, m) = 1] \\
+&\iff \overline{ak} \in S.
+\end{aligned}
+$$
 
-Thus if $S = \{\bar k_1, \ldots, \bar k_{\varphi(m)}\}$, then $S = \{\overline{ak_1}, \ldots, \overline{ak_{\varphi(m)}}\}$, so
+Thus if $S = \{\bar k_1, \ldots, \bar k_{\varphi(m)}\}$, then $S = \{\overline{ak_1}, \ldots, \overline{ak_{\varphi(m)}}\}$. Multiplying out both descriptions of $S$, with $P = k_1 k_2 \cdots k_{\varphi(m)}$:
 
 $$
 \begin{aligned}
-k_1 \cdots k_{\varphi(m)} &\equiv (ak_1) \cdots (ak_{\varphi(m)}) \pmod m \\
-\Rightarrow\; a^{\varphi(m)} k_1 \cdots k_{\varphi(m)} &\equiv k_1 k_2 \cdots k_{\varphi(m)} \pmod m \\
-\Rightarrow\; a^{\varphi(m)} &\equiv 1 \pmod m \qquad [\because \gcd(k_1 \cdots k_{\varphi(m)}, m) = 1]. \qquad \blacksquare
+P &\equiv (ak_1)(ak_2) \cdots (ak_{\varphi(m)}) \\
+&\equiv a^{\varphi(m)} P \pmod m.
 \end{aligned}
 $$
+
+Since $\gcd(P, m) = 1$, we can cancel $P$ to get $a^{\varphi(m)} \equiv 1 \pmod m$. $\blacksquare$
 
 **Corollary.** Let $p$ be a prime. Then
 
@@ -188,7 +224,9 @@ $$x \equiv b\, a^{\varphi(m) - 1} \pmod m.$$
 
 Let
 
-$$f(x) = c_0 + c_1 x + \cdots + c_n x^n \in \mathbb{Z}[x]. \tag{*}$$
+$$f(x) = c_0 + c_1 x + \cdots + c_n x^n \in \mathbb{Z}[x].$$
+
+Call this polynomial $(*)$.
 
 Our interest is to find solutions of $f(x) \equiv 0 \pmod p$, where $p$ is a prime.
 
@@ -201,7 +239,11 @@ Our interest is to find solutions of $f(x) \equiv 0 \pmod p$, where $p$ is a pri
 
 *Proof.* Let $p - 1 = dk$. Then
 
-$$x^{p-1} - 1 = (x^d - 1) f(x), \qquad \text{where } f(x) = x^{d(k-1)} + x^{d(k-2)} + \cdots + x^d + 1.$$
+$$x^{p-1} - 1 = (x^d - 1) f(x),$$
+
+where
+
+$$f(x) = x^{d(k-1)} + x^{d(k-2)} + \cdots + x^d + 1.$$
 
 - $x^{p-1} - 1 \equiv 0 \pmod p$ has exactly $p - 1$ solutions in $\mathbb{Z}_p$.
 
