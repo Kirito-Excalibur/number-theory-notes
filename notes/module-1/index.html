@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1036,19 +1038,48 @@
 </tbody>
 </table>
 <p><strong>Example 1.</strong> <span class="arithmatex">\(12x + 30y = 6\)</span>, with <span class="arithmatex">\(\gcd(12, 30) = 6\)</span>.</p>
-<div class="arithmatex">\[30 = 2 \cdot 12 + 6, \quad 12 = 2 \cdot 6 + 0 \;\Rightarrow\; 6 = 12 \cdot (-2) + 30 \cdot 1,\]</div>
-<p>i.e. <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(y = 1\)</span>.</p>
-<p><strong>Example 2.</strong> <span class="arithmatex">\(17x + 7y = 1\)</span>.</p>
-<div class="arithmatex">\[17 = 2 \cdot 7 + 3, \quad 7 = 2 \cdot 3 + 1, \quad 3 = 3 \cdot 1.\]</div>
-<div class="arithmatex">\[1 = 7 - 2 \cdot 3 = 7 - 2(17 - 2 \cdot 7) = (-2) \cdot 17 + 5 \cdot 7,\]</div>
-<p>so <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(y = 5\)</span>.</p>
-<p><strong>Example 3.</strong> <span class="arithmatex">\(35x + 22y = 1\)</span>, with <span class="arithmatex">\(\gcd(35, 22) = 1\)</span>.</p>
-<div class="arithmatex">\[35 = 1 \cdot 22 + 13, \quad 22 = 1 \cdot 13 + 9, \quad 13 = 1 \cdot 9 + 4, \quad 9 = 2 \cdot 4 + 1, \quad 4 = 4 \cdot 1 + 0.\]</div>
 <div class="arithmatex">\[
 \begin{aligned}
-1 &amp;= 9 - 2 \cdot 4 = 9 - 2(13 - 1 \cdot 9) = 3 \cdot 9 - 2 \cdot 13 \\
-  &amp;= 3(22 - 1 \cdot 13) - 2 \cdot 13 = 3 \cdot 22 - 5 \cdot 13 \\
-  &amp;= 3 \cdot 22 - 5(1 \cdot 35 - 1 \cdot 22) = (-5) \cdot 35 + 8 \cdot 22,
+30 &amp;= 2 \cdot 12 + 6 \\
+12 &amp;= 2 \cdot 6 + 0
+\end{aligned}
+\;\Rightarrow\; 6 = 12 \cdot (-2) + 30 \cdot 1,
+\]</div>
+<p>i.e. <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(y = 1\)</span>.</p>
+<p><strong>Example 2.</strong> <span class="arithmatex">\(17x + 7y = 1\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+17 &amp;= 2 \cdot 7 + 3 \\
+7 &amp;= 2 \cdot 3 + 1 \\
+3 &amp;= 3 \cdot 1
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+1 &amp;= 7 - 2 \cdot 3 \\
+&amp;= 7 - 2(17 - 2 \cdot 7) \\
+&amp;= (-2) \cdot 17 + 5 \cdot 7,
+\end{aligned}
+\]</div>
+<p>so <span class="arithmatex">\(x = -2\)</span>, <span class="arithmatex">\(y = 5\)</span>.</p>
+<p><strong>Example 3.</strong> <span class="arithmatex">\(35x + 22y = 1\)</span>, with <span class="arithmatex">\(\gcd(35, 22) = 1\)</span>.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+35 &amp;= 1 \cdot 22 + 13 \\
+22 &amp;= 1 \cdot 13 + 9 \\
+13 &amp;= 1 \cdot 9 + 4 \\
+9 &amp;= 2 \cdot 4 + 1 \\
+4 &amp;= 4 \cdot 1 + 0
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+1 &amp;= 9 - 2 \cdot 4 \\
+  &amp;= 9 - 2(13 - 1 \cdot 9) = 3 \cdot 9 - 2 \cdot 13 \\
+  &amp;= 3(22 - 1 \cdot 13) - 2 \cdot 13 \\
+  &amp;= 3 \cdot 22 - 5 \cdot 13 \\
+  &amp;= 3 \cdot 22 - 5(1 \cdot 35 - 1 \cdot 22) \\
+  &amp;= (-5) \cdot 35 + 8 \cdot 22,
 \end{aligned}
 \]</div>
 <p>so <span class="arithmatex">\(x = -5\)</span>, <span class="arithmatex">\(y = 8\)</span>.</p>
@@ -1106,14 +1137,40 @@
 <p>If <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> are relatively prime, then <span class="arithmatex">\(\varphi(mn) = \varphi(m)\varphi(n)\)</span>.</p>
 </div>
 <p><em>Proof.</em> <span class="arithmatex">\(\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|\)</span>. Note that <span class="arithmatex">\(\gcd(k, mn) = 1 \iff \gcd(k, m) = 1\)</span> and <span class="arithmatex">\(\gcd(k, n) = 1\)</span>. Arrange the numbers as an <span class="arithmatex">\(m \times n\)</span> array:</p>
-<div class="arithmatex">\[
-\begin{array}{ccccc}
-1 &amp; 2 &amp; 3 &amp; \cdots &amp; n \\
-n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
-\vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\
-(m-1)n+1 &amp; (m-1)n+2 &amp; (m-1)n+3 &amp; \cdots &amp; mn
-\end{array}
-\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(1\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(3\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(n+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(n+2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(n+3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2n\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\((m-1)n+1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((m-1)n+2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((m-1)n+3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\cdots\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(mn\)</span></td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>
 <p>The <span class="arithmatex">\(k\)</span>th row's elements are of the form <span class="arithmatex">\(kn + r\)</span>, and <span class="arithmatex">\(\gcd(kn + r, n) = \gcd(r, n)\)</span>. So there are <span class="arithmatex">\(\varphi(n)\)</span> columns of the array such that <span class="arithmatex">\(\gcd(kn + r, n) = 1\)</span> for all <span class="arithmatex">\(0 \le k \le m - 1\)</span>.</p>
@@ -1145,8 +1202,10 @@ n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
 <p><em>Proof.</em> Write <span class="arithmatex">\(n = p_1^{\alpha_1} \cdots p_r^{\alpha_r}\)</span>. Then</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\varphi(n) &amp;= \varphi(p_1^{\alpha_1}) \cdots \varphi(p_r^{\alpha_r}) = (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_r^{\alpha_r} - p_r^{\alpha_r - 1}) \\
-&amp;= p_1^{\alpha_1}\left(1 - \tfrac{1}{p_1}\right) \cdots p_r^{\alpha_r}\left(1 - \tfrac{1}{p_r}\right) = n\left(1 - \tfrac{1}{p_1}\right)\left(1 - \tfrac{1}{p_2}\right) \cdots \left(1 - \tfrac{1}{p_r}\right). \qquad \blacksquare
+\varphi(n) &amp;= \varphi(p_1^{\alpha_1}) \cdots \varphi(p_r^{\alpha_r}) \\
+&amp;= (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_r^{\alpha_r} - p_r^{\alpha_r - 1}) \\
+&amp;= p_1^{\alpha_1}\left(1 - \tfrac{1}{p_1}\right) \cdots p_r^{\alpha_r}\left(1 - \tfrac{1}{p_r}\right) \\
+&amp;= n\left(1 - \tfrac{1}{p_1}\right)\left(1 - \tfrac{1}{p_2}\right) \cdots \left(1 - \tfrac{1}{p_r}\right). \quad \blacksquare
 \end{aligned}
 \]</div>
 <div class="admonition abstract">
@@ -1172,33 +1231,45 @@ n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
 <p>Now <span class="arithmatex">\(\gcd(k, n) = d \iff \gcd\left(\frac{k}{d}, \frac{n}{d}\right) = 1 \Rightarrow |A(d)| = \varphi\left(\frac{n}{d}\right)\)</span>. So</p>
 <div class="arithmatex">\[n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(d). \qquad \blacksquare\]</div>
 <h3 id="the-mobius-function">The Möbius function<a class="headerlink" href="#the-mobius-function" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\mu(1) = 1\)</span>. For <span class="arithmatex">\(n &gt; 1\)</span>, if <span class="arithmatex">\(n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}\)</span>, then</p>
 <div class="arithmatex">\[
-\mu(1) = 1; \qquad \text{for } n &gt; 1,\ n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}: \quad
-\mu(n) = \begin{cases} (-1)^k &amp; \text{if } \alpha_1 = \alpha_2 = \cdots = \alpha_k = 1, \\ 0 &amp; \text{otherwise.} \end{cases}
+\mu(n) = \begin{cases} (-1)^k &amp; \text{if } \alpha_1 = \cdots = \alpha_k = 1, \\ 0 &amp; \text{otherwise.} \end{cases}
 \]</div>
 <table>
 <thead>
 <tr>
-<th><span class="arithmatex">\(n\)</span></th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
+<th style="text-align: center;"><span class="arithmatex">\(n\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(\mu(n)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><span class="arithmatex">\(\mu(n)\)</span></td>
-<td>1</td>
-<td>−1</td>
-<td>−1</td>
-<td>0</td>
-<td>−1</td>
-<td>1</td>
-<td>−1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">−1</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">−1</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">−1</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">−1</td>
 </tr>
 </tbody>
 </table>
@@ -1210,8 +1281,11 @@ n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
 <p><em>Proof.</em> For <span class="arithmatex">\(n &gt; 1\)</span>, write <span class="arithmatex">\(n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}\)</span>. Then</p>
 <div class="arithmatex">\[
 \begin{aligned}
-\sum_{d \mid n} \mu(d) &amp;= \mu(1) + \mu(p_1) + \cdots + \mu(p_k) + \mu(p_1 p_2) + \cdots + \mu(p_{k-1} p_k) + \cdots + \mu(p_1 \cdots p_k) \\
-&amp;= 1 + \binom{k}{1}(-1) + \binom{k}{2}(1) + \cdots + \binom{k}{k}(-1)^k = (1 - 1)^k = 0. \qquad \blacksquare
+\sum_{d \mid n} \mu(d) &amp;= \mu(1) + \mu(p_1) + \cdots + \mu(p_k) \\
+&amp;\quad + \mu(p_1 p_2) + \cdots + \mu(p_{k-1} p_k) \\
+&amp;\quad + \cdots + \mu(p_1 \cdots p_k) \\
+&amp;= 1 + \binom{k}{1}(-1) + \binom{k}{2}(1) + \cdots + \binom{k}{k}(-1)^k \\
+&amp;= (1 - 1)^k = 0. \quad \blacksquare
 \end{aligned}
 \]</div>
 <div class="admonition abstract">
@@ -1221,8 +1295,10 @@ n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
 <p><em>Proof.</em></p>
 <div class="arithmatex">\[
 \begin{aligned}
-\varphi(n) &amp;= \sum_{k=1}^{n} \left\lfloor \frac{1}{\gcd(k, n)} \right\rfloor = \sum_{k=1}^{n} \sum_{d \mid \gcd(k, n)} \mu(d) = \sum_{k=1}^{n} \sum_{\substack{d \mid k \\ d \mid n}} \mu(d) \\
-&amp;= \sum_{d \mid n} \sum_{\substack{1 \le k \le n \\ d \mid k}} \mu(d) = \sum_{d \mid n} \mu(d) \, \bigl|\{k : 1 \le k \le n,\ d \mid k\}\bigr| = \sum_{d \mid n} \mu(d) \frac{n}{d}. \qquad \blacksquare
+\varphi(n) &amp;= \sum_{k=1}^{n} \left\lfloor \frac{1}{\gcd(k, n)} \right\rfloor = \sum_{k=1}^{n} \sum_{d \mid \gcd(k, n)} \mu(d) \\
+&amp;= \sum_{k=1}^{n} \sum_{\substack{d \mid k \\ d \mid n}} \mu(d) = \sum_{d \mid n} \sum_{\substack{1 \le k \le n \\ d \mid k}} \mu(d) \\
+&amp;= \sum_{d \mid n} \mu(d) \, \bigl|\{k : 1 \le k \le n,\ d \mid k\}\bigr| \\
+&amp;= \sum_{d \mid n} \mu(d) \frac{n}{d}. \quad \blacksquare
 \end{aligned}
 \]</div>
 <div class="admonition abstract">
@@ -1300,7 +1376,7 @@ n+1 &amp; n+2 &amp; n+3 &amp; \cdots &amp; 2n \\
       
         <script src="../../javascripts/mathjax.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
       
     
   </body>

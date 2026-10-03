@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -836,12 +838,35 @@
 </div>
 <h3 id="systems-of-linear-congruences">Systems of linear congruences<a class="headerlink" href="#systems-of-linear-congruences" title="Permanent link">&para;</a></h3>
 <p>Suppose we want to solve the system of linear congruences</p>
-<div class="arithmatex">\[a_1 x \equiv b_1 \pmod{m_1}, \quad a_2 x \equiv b_2 \pmod{m_2}, \quad \ldots, \quad a_r x \equiv b_r \pmod{m_r}.\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+a_1 x &amp;\equiv b_1 \pmod{m_1} \\
+a_2 x &amp;\equiv b_2 \pmod{m_2} \\
+&amp;\;\;\vdots \\
+a_r x &amp;\equiv b_r \pmod{m_r}
+\end{aligned}
+\]</div>
 <p>The system admits no solution unless each individual congruence is solvable. Let <span class="arithmatex">\(d_k = \gcd(a_k, m_k)\)</span> with <span class="arithmatex">\(d_k \mid b_k\)</span>. This leads us to solve the system</p>
-<div class="arithmatex">\[(*) \qquad x \equiv c_1 \pmod{n_1}, \;\ldots,\; x \equiv c_r \pmod{n_r}, \qquad \text{where } n_k = \frac{m_k}{d_k}.\]</div>
+<div class="arithmatex">\[
+(*) \qquad
+\begin{aligned}
+x &amp;\equiv c_1 \pmod{n_1} \\
+&amp;\;\;\vdots \\
+x &amp;\equiv c_r \pmod{n_r}
+\end{aligned}
+\qquad \text{where } n_k = \frac{m_k}{d_k}.
+\]</div>
 <p>Now consider the situation where <span class="arithmatex">\(n_1, \ldots, n_r\)</span> are not pairwise prime; WLOG assume <span class="arithmatex">\(\gcd(n_1, n_2) = d_{12} &gt; 1\)</span>. Then a common solution of <span class="arithmatex">\(x \equiv c_1 \pmod{n_1}\)</span>, <span class="arithmatex">\(x \equiv c_2 \pmod{n_2}\)</span> will be a solution to <span class="arithmatex">\(x \equiv c_1 \pmod{d_{12}}\)</span> and <span class="arithmatex">\(x \equiv c_2 \pmod{d_{12}}\)</span>, so <span class="arithmatex">\(c_1 \equiv c_2 \pmod{d_{12}}\)</span>. This is a strong condition on the system <span class="arithmatex">\((*)\)</span>.</p>
 <p>The situation is better if we assume <span class="arithmatex">\(d_{12} = 1\)</span>, i.e. all of <span class="arithmatex">\(n_1, \ldots, n_r\)</span> are pairwise coprime. Thus we have the following system of linear congruences:</p>
-<div class="arithmatex">\[(**) \qquad x \equiv c_1 \pmod{n_1}, \;\ldots,\; x \equiv c_r \pmod{n_r}, \qquad \gcd(n_i, n_j) = 1 \text{ for } i \ne j.\]</div>
+<div class="arithmatex">\[
+(**) \qquad
+\begin{aligned}
+x &amp;\equiv c_1 \pmod{n_1} \\
+&amp;\;\;\vdots \\
+x &amp;\equiv c_r \pmod{n_r}
+\end{aligned}
+\qquad \text{with } \gcd(n_i, n_j) = 1 \text{ for } i \ne j.
+\]</div>
 <div class="admonition abstract">
 <p class="admonition-title">Chinese Remainder Theorem</p>
 <p>The system of linear congruences <span class="arithmatex">\((**)\)</span> has a solution, and the solution is unique modulo <span class="arithmatex">\(n_1 \cdots n_r\)</span>.</p>
@@ -859,7 +884,13 @@
 </li>
 </ul>
 <p><strong>Example.</strong> Solve</p>
-<div class="arithmatex">\[x \equiv 2 \pmod 3, \qquad x \equiv 3 \pmod 5, \qquad x \equiv 2 \pmod 7.\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+x &amp;\equiv 2 \pmod 3 \\
+x &amp;\equiv 3 \pmod 5 \\
+x &amp;\equiv 2 \pmod 7
+\end{aligned}
+\]</div>
 <p><em>Solution.</em> <span class="arithmatex">\(n = 3 \cdot 5 \cdot 7 = 105\)</span>; <span class="arithmatex">\(N_1 = 35\)</span>, <span class="arithmatex">\(N_2 = 21\)</span>, <span class="arithmatex">\(N_3 = 15\)</span>. Now we solve:</p>
 <table>
 <thead>
@@ -890,15 +921,21 @@
 <p>If <span class="arithmatex">\(\gcd(a, m) = 1\)</span>, then <span class="arithmatex">\(a^{\varphi(m)} \equiv 1 \pmod m\)</span>.</p>
 </div>
 <p><em>Proof.</em> Let <span class="arithmatex">\(S = \{\bar k \in \mathbb{Z}_m \mid \gcd(k, m) = 1\}\)</span>. Then</p>
-<div class="arithmatex">\[\bar k \in S \iff \gcd(k, m) = 1 \iff \gcd(ak, m) = 1 \;[\because \gcd(a, m) = 1] \iff \overline{ak} \in S.\]</div>
-<p>Thus if <span class="arithmatex">\(S = \{\bar k_1, \ldots, \bar k_{\varphi(m)}\}\)</span>, then <span class="arithmatex">\(S = \{\overline{ak_1}, \ldots, \overline{ak_{\varphi(m)}}\}\)</span>, so</p>
 <div class="arithmatex">\[
 \begin{aligned}
-k_1 \cdots k_{\varphi(m)} &amp;\equiv (ak_1) \cdots (ak_{\varphi(m)}) \pmod m \\
-\Rightarrow\; a^{\varphi(m)} k_1 \cdots k_{\varphi(m)} &amp;\equiv k_1 k_2 \cdots k_{\varphi(m)} \pmod m \\
-\Rightarrow\; a^{\varphi(m)} &amp;\equiv 1 \pmod m \qquad [\because \gcd(k_1 \cdots k_{\varphi(m)}, m) = 1]. \qquad \blacksquare
+\bar k \in S &amp;\iff \gcd(k, m) = 1 \\
+&amp;\iff \gcd(ak, m) = 1 \quad [\because \gcd(a, m) = 1] \\
+&amp;\iff \overline{ak} \in S.
 \end{aligned}
 \]</div>
+<p>Thus if <span class="arithmatex">\(S = \{\bar k_1, \ldots, \bar k_{\varphi(m)}\}\)</span>, then <span class="arithmatex">\(S = \{\overline{ak_1}, \ldots, \overline{ak_{\varphi(m)}}\}\)</span>. Multiplying out both descriptions of <span class="arithmatex">\(S\)</span>, with <span class="arithmatex">\(P = k_1 k_2 \cdots k_{\varphi(m)}\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P &amp;\equiv (ak_1)(ak_2) \cdots (ak_{\varphi(m)}) \\
+&amp;\equiv a^{\varphi(m)} P \pmod m.
+\end{aligned}
+\]</div>
+<p>Since <span class="arithmatex">\(\gcd(P, m) = 1\)</span>, we can cancel <span class="arithmatex">\(P\)</span> to get <span class="arithmatex">\(a^{\varphi(m)} \equiv 1 \pmod m\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 <p><strong>Corollary.</strong> Let <span class="arithmatex">\(p\)</span> be a prime. Then</p>
 <ol>
 <li>
@@ -921,7 +958,8 @@ k_1 \cdots k_{\varphi(m)} &amp;\equiv (ak_1) \cdots (ak_{\varphi(m)}) \pmod m \\
 </ol>
 <h2 id="polynomial-congruence-modulo-p">Polynomial Congruence modulo <span class="arithmatex">\(p\)</span><a class="headerlink" href="#polynomial-congruence-modulo-p" title="Permanent link">&para;</a></h2>
 <p>Let</p>
-<div class="arithmatex">\[f(x) = c_0 + c_1 x + \cdots + c_n x^n \in \mathbb{Z}[x]. \tag{*}\]</div>
+<div class="arithmatex">\[f(x) = c_0 + c_1 x + \cdots + c_n x^n \in \mathbb{Z}[x].\]</div>
+<p>Call this polynomial <span class="arithmatex">\((*)\)</span>.</p>
 <p>Our interest is to find solutions of <span class="arithmatex">\(f(x) \equiv 0 \pmod p\)</span>, where <span class="arithmatex">\(p\)</span> is a prime.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem (Lagrange)</p>
@@ -930,7 +968,9 @@ k_1 \cdots k_{\varphi(m)} &amp;\equiv (ak_1) \cdots (ak_{\varphi(m)}) \pmod m \\
 <p><strong>Corollary.</strong> If <span class="arithmatex">\(f\)</span>, as in <span class="arithmatex">\((*)\)</span>, is a polynomial of degree <span class="arithmatex">\(n\)</span> and if <span class="arithmatex">\(f(x) \equiv 0 \pmod p\)</span> has more than <span class="arithmatex">\(n\)</span> solutions, then <span class="arithmatex">\(p \mid c_i\)</span> for <span class="arithmatex">\(0 \le i \le n\)</span>.</p>
 <p><strong>Corollary.</strong> Let <span class="arithmatex">\(p\)</span> be a prime number and <span class="arithmatex">\(d \mid p - 1\)</span>. Then <span class="arithmatex">\(x^d \equiv 1 \pmod p\)</span> has exactly <span class="arithmatex">\(d\)</span> solutions in <span class="arithmatex">\(\mathbb{Z}_p\)</span>.</p>
 <p><em>Proof.</em> Let <span class="arithmatex">\(p - 1 = dk\)</span>. Then</p>
-<div class="arithmatex">\[x^{p-1} - 1 = (x^d - 1) f(x), \qquad \text{where } f(x) = x^{d(k-1)} + x^{d(k-2)} + \cdots + x^d + 1.\]</div>
+<div class="arithmatex">\[x^{p-1} - 1 = (x^d - 1) f(x),\]</div>
+<p>where</p>
+<div class="arithmatex">\[f(x) = x^{d(k-1)} + x^{d(k-2)} + \cdots + x^d + 1.\]</div>
 <ul>
 <li>
 <p><span class="arithmatex">\(x^{p-1} - 1 \equiv 0 \pmod p\)</span> has exactly <span class="arithmatex">\(p - 1\)</span> solutions in <span class="arithmatex">\(\mathbb{Z}_p\)</span>.</p>
@@ -1100,7 +1140,7 @@ k_1 \cdots k_{\varphi(m)} &amp;\equiv (ak_1) \cdots (ak_{\varphi(m)}) \pmod m \\
       
         <script src="../../javascripts/mathjax.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
       
     
   </body>
