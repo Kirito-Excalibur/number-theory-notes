@@ -6,11 +6,11 @@ window.MathJax = {
     processEnvironments: true
   },
   output: {
-    // Break long formulas to fit narrow (mobile) screens instead of overflowing
-    displayOverflow: "linebreak",
+    // Keep every equation on one line: shrink a display equation that is
+    // too wide for the screen instead of wrapping it mid-equation.
+    displayOverflow: "scale",
     linebreaks: {
-      inline: true,
-      width: "100%"
+      inline: false
     }
   },
   options: {

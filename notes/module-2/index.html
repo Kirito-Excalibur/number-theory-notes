@@ -737,10 +737,10 @@
 <p><span class="arithmatex">\(a \equiv b \pmod 1\)</span> for all <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(a \equiv b \pmod m \Rightarrow a \equiv b \pmod d\)</span> for <span class="arithmatex">\(d \mid m\)</span>.</p>
+<p><span class="arithmatex">\(a \equiv b \pmod m\)</span> <span class="arithmatex">\(\Rightarrow a \equiv b \pmod d\)</span> for <span class="arithmatex">\(d \mid m\)</span>.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(a \equiv 0 \pmod m \iff m \mid a\)</span>; <span class="arithmatex">\(\ a \equiv b \pmod m \iff a - b \equiv 0 \pmod m\)</span>.</p>
+<p><span class="arithmatex">\(a \equiv 0 \pmod m \iff m \mid a\)</span>; <span class="arithmatex">\(\ a \equiv b \pmod m\)</span> <span class="arithmatex">\(\iff a - b \equiv 0 \pmod m\)</span>.</p>
 </li>
 </ul>
 <p>When <span class="arithmatex">\(a \not\equiv b \pmod m\)</span>, we say <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are <em>incongruent</em> mod <span class="arithmatex">\(m\)</span>.</p>
@@ -754,10 +754,10 @@
 <p><strong>Reflexive:</strong> <span class="arithmatex">\(a \equiv a \pmod m\)</span> for all <span class="arithmatex">\(a \in \mathbb{Z}\)</span>.</p>
 </li>
 <li>
-<p><strong>Symmetric:</strong> <span class="arithmatex">\(a \equiv b \pmod m \Rightarrow m \mid a - b \Rightarrow m \mid b - a \Rightarrow b \equiv a \pmod m\)</span>.</p>
+<p><strong>Symmetric:</strong> <span class="arithmatex">\(a \equiv b \pmod m\)</span> <span class="arithmatex">\(\Rightarrow m \mid a - b\)</span> <span class="arithmatex">\(\Rightarrow m \mid b - a\)</span> <span class="arithmatex">\(\Rightarrow b \equiv a \pmod m\)</span>.</p>
 </li>
 <li>
-<p><strong>Transitive:</strong> <span class="arithmatex">\(a \equiv b \pmod m\)</span> and <span class="arithmatex">\(b \equiv c \pmod m \Rightarrow m \mid a - b\)</span> and <span class="arithmatex">\(m \mid b - c \Rightarrow m \mid (a - b) + (b - c) \Rightarrow a \equiv c \pmod m\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><strong>Transitive:</strong> <span class="arithmatex">\(a \equiv b \pmod m\)</span> and <span class="arithmatex">\(b \equiv c \pmod m\)</span> <span class="arithmatex">\(\Rightarrow m \mid a - b\)</span> and <span class="arithmatex">\(m \mid b - c\)</span> <span class="arithmatex">\(\Rightarrow m \mid (a - b) + (b - c)\)</span> <span class="arithmatex">\(\Rightarrow a \equiv c \pmod m\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 </li>
 </ul>
 <p>Thus the equivalence relation yields a partition of <span class="arithmatex">\(\mathbb{Z}\)</span>. Each of the parts is called a <em>residue class</em>. For <span class="arithmatex">\(a \in \mathbb{Z}\)</span>, the residue class of <span class="arithmatex">\(a\)</span> is denoted by <span class="arithmatex">\(\bar a\)</span>.</p>
@@ -765,8 +765,8 @@
 <p class="admonition-title">Lemma</p>
 <p>There exist exactly <span class="arithmatex">\(m\)</span> distinct residue classes, given by <span class="arithmatex">\(\bar 0, \bar 1, \ldots, \overline{m-1}\)</span>.</p>
 </div>
-<p><em>Proof.</em> If <span class="arithmatex">\(0 \le a, b \le m - 1\)</span> and <span class="arithmatex">\(a \ne b\)</span>, then <span class="arithmatex">\(m \nmid a - b \Rightarrow a \not\equiv b \pmod m\)</span>. So all the residue classes <span class="arithmatex">\(\bar 0, \bar 1, \ldots, \overline{m-1}\)</span> are distinct.</p>
-<p>Now suppose <span class="arithmatex">\(a \in \mathbb{Z}\)</span>. By the division algorithm, <span class="arithmatex">\(a = qm + r\)</span> where <span class="arithmatex">\(0 \le r &lt; m\)</span>, so <span class="arithmatex">\(a \equiv r \pmod m \Rightarrow \bar a = \bar r\)</span> (the classes <span class="arithmatex">\(\bar a\)</span> and <span class="arithmatex">\(\bar r\)</span> are the same), i.e. <span class="arithmatex">\(\bar a \in \{\bar 0, \bar 1, \ldots, \overline{m-1}\}\)</span>. This finishes the proof. <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><em>Proof.</em> If <span class="arithmatex">\(0 \le a, b \le m - 1\)</span> and <span class="arithmatex">\(a \ne b\)</span>, then <span class="arithmatex">\(m \nmid a - b\)</span> <span class="arithmatex">\(\Rightarrow a \not\equiv b \pmod m\)</span>. So all the residue classes <span class="arithmatex">\(\bar 0, \bar 1, \ldots, \overline{m-1}\)</span> are distinct.</p>
+<p>Now suppose <span class="arithmatex">\(a \in \mathbb{Z}\)</span>. By the division algorithm, <span class="arithmatex">\(a = qm + r\)</span> where <span class="arithmatex">\(0 \le r &lt; m\)</span>, so <span class="arithmatex">\(a \equiv r \pmod m\)</span> <span class="arithmatex">\(\Rightarrow \bar a = \bar r\)</span> (the classes <span class="arithmatex">\(\bar a\)</span> and <span class="arithmatex">\(\bar r\)</span> are the same), i.e. <span class="arithmatex">\(\bar a \in \{\bar 0, \bar 1, \ldots, \overline{m-1}\}\)</span>. This finishes the proof. <span class="arithmatex">\(\blacksquare\)</span></p>
 <p>Denote the set <span class="arithmatex">\(\{\bar 0, \bar 1, \ldots, \overline{m-1}\}\)</span> by <span class="arithmatex">\(\mathbb{Z}_m\)</span> or <span class="arithmatex">\(\mathbb{Z}/m\mathbb{Z}\)</span>. Then <span class="arithmatex">\(\mathbb{Z}_m\)</span> is an abelian group under the operation <span class="arithmatex">\(\bar a + \bar b = \overline{a + b}\)</span>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Proposition</p>
@@ -854,8 +854,8 @@ x &amp;\equiv c_1 \pmod{n_1} \\
 &amp;\;\;\vdots \\
 x &amp;\equiv c_r \pmod{n_r}
 \end{aligned}
-\qquad \text{where } n_k = \frac{m_k}{d_k}.
 \]</div>
+<p>where <span class="arithmatex">\(n_k = \dfrac{m_k}{d_k}\)</span>.</p>
 <p>Now consider the situation where <span class="arithmatex">\(n_1, \ldots, n_r\)</span> are not pairwise prime; WLOG assume <span class="arithmatex">\(\gcd(n_1, n_2) = d_{12} &gt; 1\)</span>. Then a common solution of <span class="arithmatex">\(x \equiv c_1 \pmod{n_1}\)</span>, <span class="arithmatex">\(x \equiv c_2 \pmod{n_2}\)</span> will be a solution to <span class="arithmatex">\(x \equiv c_1 \pmod{d_{12}}\)</span> and <span class="arithmatex">\(x \equiv c_2 \pmod{d_{12}}\)</span>, so <span class="arithmatex">\(c_1 \equiv c_2 \pmod{d_{12}}\)</span>. This is a strong condition on the system <span class="arithmatex">\((*)\)</span>.</p>
 <p>The situation is better if we assume <span class="arithmatex">\(d_{12} = 1\)</span>, i.e. all of <span class="arithmatex">\(n_1, \ldots, n_r\)</span> are pairwise coprime. Thus we have the following system of linear congruences:</p>
 <div class="arithmatex">\[
@@ -865,8 +865,8 @@ x &amp;\equiv c_1 \pmod{n_1} \\
 &amp;\;\;\vdots \\
 x &amp;\equiv c_r \pmod{n_r}
 \end{aligned}
-\qquad \text{with } \gcd(n_i, n_j) = 1 \text{ for } i \ne j.
 \]</div>
+<p>with <span class="arithmatex">\(\gcd(n_i, n_j) = 1\)</span> for <span class="arithmatex">\(i \ne j\)</span>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Chinese Remainder Theorem</p>
 <p>The system of linear congruences <span class="arithmatex">\((**)\)</span> has a solution, and the solution is unique modulo <span class="arithmatex">\(n_1 \cdots n_r\)</span>.</p>
@@ -874,7 +874,7 @@ x &amp;\equiv c_r \pmod{n_r}
 <p><em>Construction of the solution.</em> Let <span class="arithmatex">\(n = n_1 n_2 \cdots n_r\)</span> and <span class="arithmatex">\(N_k = \dfrac{n}{n_k}\)</span>.</p>
 <ul>
 <li>
-<p>Clearly <span class="arithmatex">\(N_k x \equiv 1 \pmod{n_k}\)</span> has a unique solution, say <span class="arithmatex">\(x_k\)</span>; i.e. <span class="arithmatex">\(N_k x_k \equiv 1 \pmod{n_k} \Rightarrow c_k N_k x_k \equiv c_k \pmod{n_k}\)</span>.</p>
+<p>Clearly <span class="arithmatex">\(N_k x \equiv 1 \pmod{n_k}\)</span> has a unique solution, say <span class="arithmatex">\(x_k\)</span>; i.e. <span class="arithmatex">\(N_k x_k \equiv 1 \pmod{n_k}\)</span> <span class="arithmatex">\(\Rightarrow c_k N_k x_k \equiv c_k \pmod{n_k}\)</span>.</p>
 </li>
 <li>
 <p>Let <span class="arithmatex">\(x = c_1 N_1 x_1 + \cdots + c_r N_r x_r\)</span>. Then <span class="arithmatex">\(x \equiv c_k N_k x_k \equiv c_k \pmod{n_k}\)</span> for each <span class="arithmatex">\(k\)</span>.</p>
@@ -914,7 +914,15 @@ x &amp;\equiv 2 \pmod 7
 </tr>
 </tbody>
 </table>
-<p>So <span class="arithmatex">\(x = c_1 N_1 x_1 + c_2 N_2 x_2 + c_3 N_3 x_3 = 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 = 233\)</span>. Therefore the system has the unique solution <span class="arithmatex">\(233 \equiv 23 \pmod{105}\)</span>.</p>
+<p>So</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x &amp;= c_1 N_1 x_1 + c_2 N_2 x_2 + c_3 N_3 x_3 \\
+&amp;= 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 \\
+&amp;= 233.
+\end{aligned}
+\]</div>
+<p>Therefore the system has the unique solution <span class="arithmatex">\(233 \equiv 23 \pmod{105}\)</span>.</p>
 <h2 id="fermats-little-theorem">Fermat's Little Theorem<a class="headerlink" href="#fermats-little-theorem" title="Permanent link">&para;</a></h2>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem (Euler–Fermat)</p>
@@ -1020,11 +1028,17 @@ P &amp;\equiv (ak_1)(ak_2) \cdots (ak_{\varphi(m)}) \\
 <p>Assume <span class="arithmatex">\(\gcd(a, n) = 1\)</span> and <span class="arithmatex">\(a\)</span> has order <span class="arithmatex">\(k\)</span> modulo <span class="arithmatex">\(n\)</span>. Then <span class="arithmatex">\(a^h \equiv 1 \pmod n\)</span> if and only if <span class="arithmatex">\(k \mid h\)</span>. In particular, <span class="arithmatex">\(k \mid \varphi(n)\)</span>.</p>
 </div>
 <p><em>Proof.</em> By the division algorithm, <span class="arithmatex">\(h = kq + r\)</span> with <span class="arithmatex">\(0 \le r &lt; k\)</span>. Then</p>
-<div class="arithmatex">\[a^h \equiv (a^k)^q \cdot a^r \pmod n \Rightarrow a^r \equiv 1 \pmod n \Rightarrow r = 0. \qquad \blacksquare\]</div>
-<p><strong>Corollary.</strong> If <span class="arithmatex">\(a\)</span> has order <span class="arithmatex">\(k\)</span> modulo <span class="arithmatex">\(n\)</span>, then <span class="arithmatex">\(a^i \equiv a^j \pmod n \iff i \equiv j \pmod k\)</span>.</p>
-<p><em>Proof.</em> For <span class="arithmatex">\(i \ge j\)</span>: <span class="arithmatex">\(a^i \equiv a^j \pmod n \iff a^{i-j} \equiv 1 \pmod n \iff k \mid i - j \iff i \equiv j \pmod k\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+a^h &amp;\equiv (a^k)^q \cdot a^r \pmod n \\
+\Rightarrow\; a^r &amp;\equiv 1 \pmod n \\
+\Rightarrow\; r &amp;= 0. \quad \blacksquare
+\end{aligned}
+\]</div>
+<p><strong>Corollary.</strong> If <span class="arithmatex">\(a\)</span> has order <span class="arithmatex">\(k\)</span> modulo <span class="arithmatex">\(n\)</span>, then <span class="arithmatex">\(a^i \equiv a^j \pmod n\)</span> <span class="arithmatex">\(\iff i \equiv j \pmod k\)</span>.</p>
+<p><em>Proof.</em> For <span class="arithmatex">\(i \ge j\)</span>: <span class="arithmatex">\(a^i \equiv a^j \pmod n\)</span> <span class="arithmatex">\(\iff a^{i-j} \equiv 1 \pmod n\)</span> <span class="arithmatex">\(\iff k \mid i - j\)</span> <span class="arithmatex">\(\iff i \equiv j \pmod k\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 <p><strong>Corollary.</strong> If <span class="arithmatex">\(a\)</span> has order <span class="arithmatex">\(k\)</span> modulo <span class="arithmatex">\(n\)</span>, then the integers <span class="arithmatex">\(a, a^2, \ldots, a^k\)</span> are incongruent modulo <span class="arithmatex">\(n\)</span>.</p>
-<p><em>Proof.</em> For <span class="arithmatex">\(1 \le i, j \le k\)</span>: <span class="arithmatex">\(a^i \equiv a^j \pmod n \iff k \mid i - j \iff i = j\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><em>Proof.</em> For <span class="arithmatex">\(1 \le i, j \le k\)</span>: <span class="arithmatex">\(a^i \equiv a^j \pmod n\)</span> <span class="arithmatex">\(\iff k \mid i - j\)</span> <span class="arithmatex">\(\iff i = j\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 <div class="admonition abstract">
 <p class="admonition-title">Proposition</p>
 <p>If the integer <span class="arithmatex">\(a\)</span> has order <span class="arithmatex">\(k\)</span> modulo <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(h &gt; 0\)</span>, then <span class="arithmatex">\(a^h\)</span> has order <span class="arithmatex">\(\dfrac{k}{\gcd(h, k)}\)</span> modulo <span class="arithmatex">\(n\)</span>.</p>
@@ -1035,7 +1049,7 @@ P &amp;\equiv (ak_1)(ak_2) \cdots (ak_{\varphi(m)}) \\
 <p><span class="arithmatex">\((a^h)^{k_1} = a^{dh_1 k_1} \equiv (a^k)^{h_1} \equiv 1 \pmod n\)</span>. Let <span class="arithmatex">\(a^h\)</span> have order <span class="arithmatex">\(r\)</span> modulo <span class="arithmatex">\(n\)</span>; then <span class="arithmatex">\(r \mid k_1\)</span>.</p>
 </li>
 <li>
-<p>Now <span class="arithmatex">\((a^h)^r \equiv 1 \pmod n \Rightarrow k \mid hr \Rightarrow dk_1 \mid dh_1 r \Rightarrow k_1 \mid h_1 r \Rightarrow k_1 \mid r\)</span> (since <span class="arithmatex">\(\gcd(h_1, k_1) = 1\)</span>).</p>
+<p>Now <span class="arithmatex">\((a^h)^r \equiv 1 \pmod n\)</span> <span class="arithmatex">\(\Rightarrow k \mid hr\)</span> <span class="arithmatex">\(\Rightarrow dk_1 \mid dh_1 r\)</span> <span class="arithmatex">\(\Rightarrow k_1 \mid h_1 r\)</span> <span class="arithmatex">\(\Rightarrow k_1 \mid r\)</span> (since <span class="arithmatex">\(\gcd(h_1, k_1) = 1\)</span>).</p>
 </li>
 <li>
 <p>Therefore <span class="arithmatex">\(r = k_1\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
@@ -1050,14 +1064,21 @@ P &amp;\equiv (ak_1)(ak_2) \cdots (ak_{\varphi(m)}) \\
 <div class="arithmatex">\[\{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} = \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}.\]</div>
 </div>
 <p><em>Proof.</em> <span class="arithmatex">\(\gcd(a^i, n) = 1\)</span> for all <span class="arithmatex">\(i \ge 1\)</span>, so <span class="arithmatex">\(\bar a^i \in \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}\)</span> for all <span class="arithmatex">\(i \ge 1\)</span>. Since <span class="arithmatex">\(\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\)</span> are incongruent, i.e. <span class="arithmatex">\(\bar a^i \ne \bar a^j\)</span> for <span class="arithmatex">\(1 \le i &lt; j \le \varphi(n)\)</span>,</p>
-<div class="arithmatex">\[\{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} \subseteq \{\bar a_1, \ldots, \bar a_{\varphi(n)}\} \Rightarrow \{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} = \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}. \qquad \blacksquare\]</div>
+<div class="arithmatex">\[
+\begin{gathered}
+\{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} \subseteq \{\bar a_1, \ldots, \bar a_{\varphi(n)}\} \\
+\Rightarrow\; \{\bar a, \bar a^2, \ldots, \bar a^{\varphi(n)}\} = \{\bar a_1, \ldots, \bar a_{\varphi(n)}\}. \quad \blacksquare
+\end{gathered}
+\]</div>
 <p><strong>Corollary.</strong> If <span class="arithmatex">\(n\)</span> has a primitive root, then the total number of primitive roots is <span class="arithmatex">\(\varphi(\varphi(n))\)</span>.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem</p>
 <p>If <span class="arithmatex">\(p\)</span> is a prime number and <span class="arithmatex">\(d \mid p - 1\)</span>, then there are exactly <span class="arithmatex">\(\varphi(d)\)</span> incongruent integers having order <span class="arithmatex">\(d\)</span> modulo <span class="arithmatex">\(p\)</span>.</p>
 </div>
-<p><em>Proof.</em> Let <span class="arithmatex">\(\psi(d) = \bigl|\{k \mid 1 \le k \le p - 1 \text{ and } k \text{ has order } d \text{ modulo } p\}\bigr|\)</span>. Then</p>
-<div class="arithmatex">\[p - 1 = \sum_{d \mid p-1} \psi(d), \qquad \text{and by Gauss,} \qquad p - 1 = \sum_{d \mid p-1} \varphi(d).\]</div>
+<p><em>Proof.</em> Let <span class="arithmatex">\(\psi(d)\)</span> be the number of <span class="arithmatex">\(k\)</span> with <span class="arithmatex">\(1 \le k \le p - 1\)</span> such that <span class="arithmatex">\(k\)</span> has order <span class="arithmatex">\(d\)</span> modulo <span class="arithmatex">\(p\)</span>. Then</p>
+<div class="arithmatex">\[p - 1 = \sum_{d \mid p-1} \psi(d),\]</div>
+<p>and by Gauss,</p>
+<div class="arithmatex">\[p - 1 = \sum_{d \mid p-1} \varphi(d).\]</div>
 <p>Therefore</p>
 <div class="arithmatex">\[\sum_{d \mid p-1} \psi(d) = \sum_{d \mid p-1} \varphi(d) \;\Rightarrow\; \sum_{d \mid p-1} \bigl[\varphi(d) - \psi(d)\bigr] = 0.\]</div>
 <p>It is enough to show that</p>

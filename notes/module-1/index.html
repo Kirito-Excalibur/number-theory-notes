@@ -915,13 +915,16 @@
 <p><em>Solution.</em> Any integer <span class="arithmatex">\(a\)</span> has one of the forms <span class="arithmatex">\(3k\)</span>, <span class="arithmatex">\(3k+1\)</span>, <span class="arithmatex">\(3k+2\)</span>.</p>
 <ul>
 <li>
-<p>If <span class="arithmatex">\(a = 3k\)</span>, then <span class="arithmatex">\(\frac{a(a^2+2)}{3} = k(9k^2 + 2) \in \mathbb{Z}\)</span>.</p>
+<p>If <span class="arithmatex">\(a = 3k\)</span>, then</p>
+<div class="arithmatex">\[\frac{a(a^2+2)}{3} = k(9k^2 + 2) \in \mathbb{Z}.\]</div>
 </li>
 <li>
-<p>If <span class="arithmatex">\(a = 3k+1\)</span>, then <span class="arithmatex">\(\frac{a(a^2+2)}{3} = (3k+1)(3k^2 + 2k + 1) \in \mathbb{Z}\)</span>.</p>
+<p>If <span class="arithmatex">\(a = 3k+1\)</span>, then</p>
+<div class="arithmatex">\[\frac{a(a^2+2)}{3} = (3k+1)(3k^2 + 2k + 1) \in \mathbb{Z}.\]</div>
 </li>
 <li>
-<p>If <span class="arithmatex">\(a = 3k+2\)</span>, then <span class="arithmatex">\(\frac{a(a^2+2)}{3} = (3k+2)(3k^2 + 4k + 2) \in \mathbb{Z}\)</span>.</p>
+<p>If <span class="arithmatex">\(a = 3k+2\)</span>, then</p>
+<div class="arithmatex">\[\frac{a(a^2+2)}{3} = (3k+2)(3k^2 + 4k + 2) \in \mathbb{Z}.\]</div>
 </li>
 </ul>
 <h2 id="greatest-common-divisor-gcd">Greatest Common Divisor (GCD)<a class="headerlink" href="#greatest-common-divisor-gcd" title="Permanent link">&para;</a></h2>
@@ -941,10 +944,10 @@
 <p><em>Sketch.</em> <span class="arithmatex">\((\Leftarrow)\)</span> is okay. <span class="arithmatex">\((\Rightarrow)\)</span> By the division algorithm, <span class="arithmatex">\(d = cq + r\)</span>, <span class="arithmatex">\(0 \le r &lt; c\)</span>. Assume <span class="arithmatex">\(r &gt; 0\)</span>. Write <span class="arithmatex">\(a = dx\)</span>, <span class="arithmatex">\(b = dy\)</span> and <span class="arithmatex">\(a = cz\)</span>, <span class="arithmatex">\(b = cw\)</span>.</p>
 <ul>
 <li>
-<p>Observe that <span class="arithmatex">\(\gcd(x, y) = 1\)</span>: if <span class="arithmatex">\(d' = \gcd(x, y)\)</span>, then <span class="arithmatex">\(dd'\)</span> is a common divisor of <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, so <span class="arithmatex">\(dd' \le d \Rightarrow d' \le 1 \Rightarrow d' = 1\)</span> (since <span class="arithmatex">\(d' &gt; 0\)</span>).</p>
+<p>Observe that <span class="arithmatex">\(\gcd(x, y) = 1\)</span>: if <span class="arithmatex">\(d' = \gcd(x, y)\)</span>, then <span class="arithmatex">\(dd'\)</span> is a common divisor of <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, so <span class="arithmatex">\(dd' \le d\)</span> <span class="arithmatex">\(\Rightarrow d' \le 1\)</span> <span class="arithmatex">\(\Rightarrow d' = 1\)</span> (since <span class="arithmatex">\(d' &gt; 0\)</span>).</p>
 </li>
 <li>
-<p>Now <span class="arithmatex">\(a = dx = (cq + r)x \Rightarrow c(z - xq) = rx \Rightarrow c \mid rx\)</span>. Similarly <span class="arithmatex">\(c \mid ry\)</span>.</p>
+<p>Now <span class="arithmatex">\(a = dx = (cq + r)x\)</span> <span class="arithmatex">\(\Rightarrow c(z - xq) = rx\)</span> <span class="arithmatex">\(\Rightarrow c \mid rx\)</span>. Similarly <span class="arithmatex">\(c \mid ry\)</span>.</p>
 </li>
 <li>
 <p>Hence <span class="arithmatex">\(c \le \gcd(rx, ry) = r\gcd(x, y) = r\)</span>, a contradiction since <span class="arithmatex">\(r &lt; c\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
@@ -968,7 +971,7 @@
 <p><em>Claim:</em> <span class="arithmatex">\(d = \gcd(a, b)\)</span>. Write <span class="arithmatex">\(a = dq' + r\)</span>, <span class="arithmatex">\(0 \le r &lt; d\)</span>. Then <span class="arithmatex">\(r = a - dq' = a(1 - pq') - b(qq')\)</span>. If <span class="arithmatex">\(r &gt; 0\)</span> then <span class="arithmatex">\(r \in S\)</span>, so <span class="arithmatex">\(d \le r\)</span>, a contradiction; hence <span class="arithmatex">\(r = 0\)</span>, i.e. <span class="arithmatex">\(d \mid a\)</span>. Similarly <span class="arithmatex">\(d \mid b\)</span>.</p>
 </li>
 <li>
-<p>Now let <span class="arithmatex">\(c \mid a\)</span> and <span class="arithmatex">\(c \mid b \Rightarrow a = cs\)</span>, <span class="arithmatex">\(b = ct\)</span>. Then <span class="arithmatex">\(d = ap + bq = c(sp + tq) \Rightarrow c \le d\)</span>.</p>
+<p>Now let <span class="arithmatex">\(c \mid a\)</span> and <span class="arithmatex">\(c \mid b \Rightarrow a = cs\)</span>, <span class="arithmatex">\(b = ct\)</span>. Then <span class="arithmatex">\(d = ap + bq = c(sp + tq)\)</span> <span class="arithmatex">\(\Rightarrow c \le d\)</span>.</p>
 </li>
 </ul>
 <p>Hence <span class="arithmatex">\(d = \gcd(a, b)\)</span> by definition. <span class="arithmatex">\(\blacksquare\)</span></p>
@@ -977,10 +980,10 @@
 <p class="admonition-title">Theorem</p>
 <p>Let <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span>, not both zero. Then <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are relatively prime <span class="arithmatex">\(\iff\)</span> there exist integers <span class="arithmatex">\(p, q\)</span> such that <span class="arithmatex">\(ap + bq = 1\)</span>.</p>
 </div>
-<p><em>Proof.</em> <span class="arithmatex">\((\Rightarrow)\)</span> is immediate by the above theorem. <span class="arithmatex">\((\Leftarrow)\)</span> Let <span class="arithmatex">\(d = \gcd(a, b)\)</span>, so <span class="arithmatex">\(a = du\)</span> and <span class="arithmatex">\(b = dv\)</span>. Then <span class="arithmatex">\(ap + bq = 1 \Rightarrow d(up + vq) = 1 \Rightarrow d = 1\)</span> (since <span class="arithmatex">\(d &gt; 0\)</span>). <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><em>Proof.</em> <span class="arithmatex">\((\Rightarrow)\)</span> is immediate by the above theorem. <span class="arithmatex">\((\Leftarrow)\)</span> Let <span class="arithmatex">\(d = \gcd(a, b)\)</span>, so <span class="arithmatex">\(a = du\)</span> and <span class="arithmatex">\(b = dv\)</span>. Then <span class="arithmatex">\(ap + bq = 1\)</span> <span class="arithmatex">\(\Rightarrow d(up + vq) = 1\)</span> <span class="arithmatex">\(\Rightarrow d = 1\)</span> (since <span class="arithmatex">\(d &gt; 0\)</span>). <span class="arithmatex">\(\blacksquare\)</span></p>
 <ul>
 <li>
-<p><strong>Corollary 1.</strong> <span class="arithmatex">\(\gcd(a, b) = d \Rightarrow \gcd\left(\frac{a}{d}, \frac{b}{d}\right) = 1\)</span>.</p>
+<p><strong>Corollary 1.</strong> <span class="arithmatex">\(\gcd(a, b) = d\)</span> <span class="arithmatex">\(\Rightarrow \gcd\left(\frac{a}{d}, \frac{b}{d}\right) = 1\)</span>.</p>
 </li>
 <li>
 <p><strong>Corollary 2.</strong> <span class="arithmatex">\(a \mid c\)</span>, <span class="arithmatex">\(b \mid c\)</span> with <span class="arithmatex">\(\gcd(a, b) = 1 \Rightarrow ab \mid c\)</span>.</p>
@@ -994,7 +997,7 @@
 <p class="admonition-title">Lemma</p>
 <p>If <span class="arithmatex">\(a = bq + r\)</span>, then <span class="arithmatex">\(\gcd(a, b) = \gcd(b, r)\)</span>.</p>
 </div>
-<p><em>Proof.</em> Let <span class="arithmatex">\(d = \gcd(a, b)\)</span>. Then <span class="arithmatex">\(d \mid a\)</span>, <span class="arithmatex">\(d \mid b \Rightarrow d \mid a - bq \Rightarrow d \mid r\)</span>. If <span class="arithmatex">\(c \mid b\)</span> and <span class="arithmatex">\(c \mid r\)</span>, then <span class="arithmatex">\(c \mid a\)</span>, so <span class="arithmatex">\(c \le d\)</span> (since <span class="arithmatex">\(d = \gcd(a, b)\)</span>). By definition, <span class="arithmatex">\(d = \gcd(b, r)\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><em>Proof.</em> Let <span class="arithmatex">\(d = \gcd(a, b)\)</span>. Then <span class="arithmatex">\(d \mid a\)</span>, <span class="arithmatex">\(d \mid b\)</span> <span class="arithmatex">\(\Rightarrow d \mid a - bq\)</span> <span class="arithmatex">\(\Rightarrow d \mid r\)</span>. If <span class="arithmatex">\(c \mid b\)</span> and <span class="arithmatex">\(c \mid r\)</span>, then <span class="arithmatex">\(c \mid a\)</span>, so <span class="arithmatex">\(c \le d\)</span> (since <span class="arithmatex">\(d = \gcd(a, b)\)</span>). By definition, <span class="arithmatex">\(d = \gcd(b, r)\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 <p><strong>Euclidean Algorithm.</strong> Our objective is to find <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> such that <span class="arithmatex">\(ax + by = \gcd(a, b)\)</span>. Without loss of generality assume <span class="arithmatex">\(a &gt; b\)</span> and <span class="arithmatex">\(b \nmid a\)</span>.</p>
 <table>
 <thead>
@@ -1088,7 +1091,12 @@
 <div class="admonition abstract">
 <p class="admonition-title">Divisibility Theorem</p>
 <p>The linear Diophantine equation <span class="arithmatex">\(ax + by = c\)</span> has a solution if and only if <span class="arithmatex">\(\gcd(a, b) \mid c\)</span>. If <span class="arithmatex">\((x_0, y_0)\)</span> is any particular solution of <span class="arithmatex">\(ax + by = c\)</span>, then all the other solutions are given by (with <span class="arithmatex">\(d = \gcd(a, b)\)</span>)</p>
-<div class="arithmatex">\[x = x_0 + \frac{b}{d} t, \qquad y = y_0 - \frac{a}{d} t, \qquad t \in \mathbb{Z}.\]</div>
+<div class="arithmatex">\[
+\begin{gathered}
+x = x_0 + \frac{b}{d} t, \\
+y = y_0 - \frac{a}{d} t, \qquad t \in \mathbb{Z}.
+\end{gathered}
+\]</div>
 </div>
 <p><strong>Corollary.</strong> If <span class="arithmatex">\(\gcd(a, b) = 1\)</span>, then <span class="arithmatex">\(ax + by = c\)</span> has an integer solution. If <span class="arithmatex">\((x_0, y_0)\)</span> is a particular solution, then all solutions are given by <span class="arithmatex">\(x = x_0 + bt\)</span>, <span class="arithmatex">\(y = y_0 - at\)</span>, <span class="arithmatex">\(t \in \mathbb{Z}\)</span>.</p>
 <p><strong>Examples.</strong></p>
@@ -1112,7 +1120,7 @@
 <p><strong>Corollary 1.</strong> If <span class="arithmatex">\(p\)</span> is a prime and <span class="arithmatex">\(p \mid a_1 \cdots a_n\)</span>, then <span class="arithmatex">\(p \mid a_k\)</span> for some <span class="arithmatex">\(1 \le k \le n\)</span>.</p>
 </li>
 <li>
-<p><strong>Corollary 2.</strong> If <span class="arithmatex">\(p, a_1, \ldots, a_n\)</span> are all prime, then <span class="arithmatex">\(p \mid a_1 \cdots a_n \Rightarrow p = a_k\)</span> for some <span class="arithmatex">\(1 \le k \le n\)</span>.</p>
+<p><strong>Corollary 2.</strong> If <span class="arithmatex">\(p, a_1, \ldots, a_n\)</span> are all prime, then <span class="arithmatex">\(p \mid a_1 \cdots a_n\)</span> <span class="arithmatex">\(\Rightarrow p = a_k\)</span> for some <span class="arithmatex">\(1 \le k \le n\)</span>.</p>
 </li>
 </ul>
 <div class="admonition abstract">
@@ -1122,7 +1130,13 @@
 <p>where <span class="arithmatex">\(p_1, \ldots, p_r\)</span> are primes and <span class="arithmatex">\(\alpha_1, \ldots, \alpha_r \in \mathbb{N}\)</span>.</p>
 </div>
 <p><strong>Exercise.</strong> Let <span class="arithmatex">\(m = p_1^{\alpha_1} \cdots p_r^{\alpha_r}\)</span> and <span class="arithmatex">\(n = p_1^{\beta_1} \cdots p_r^{\beta_r}\)</span>. Show that</p>
-<div class="arithmatex">\[\gcd(m, n) = \prod_{i=1}^{r} p_i^{\min\{\alpha_i, \beta_i\}} \quad\text{and}\quad \operatorname{lcm}(m, n) = \prod_{i=1}^{r} p_i^{\max\{\alpha_i, \beta_i\}}.\]</div>
+<div class="arithmatex">\[
+\begin{gathered}
+\gcd(m, n) = \prod_{i=1}^{r} p_i^{\min\{\alpha_i, \beta_i\}} \\
+\text{and} \\
+\operatorname{lcm}(m, n) = \prod_{i=1}^{r} p_i^{\max\{\alpha_i, \beta_i\}}.
+\end{gathered}
+\]</div>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem (Euclid)</p>
 <p>There are infinitely many primes.</p>
@@ -1136,7 +1150,9 @@
 <p class="admonition-title">Lemma</p>
 <p>If <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> are relatively prime, then <span class="arithmatex">\(\varphi(mn) = \varphi(m)\varphi(n)\)</span>.</p>
 </div>
-<p><em>Proof.</em> <span class="arithmatex">\(\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|\)</span>. Note that <span class="arithmatex">\(\gcd(k, mn) = 1 \iff \gcd(k, m) = 1\)</span> and <span class="arithmatex">\(\gcd(k, n) = 1\)</span>. Arrange the numbers as an <span class="arithmatex">\(m \times n\)</span> array:</p>
+<p><em>Proof.</em></p>
+<div class="arithmatex">\[\varphi(mn) = \bigl|\{k \in \mathbb{Z} : 1 \le k \le mn,\ \gcd(k, mn) = 1\}\bigr|.\]</div>
+<p>Note that <span class="arithmatex">\(\gcd(k, mn) = 1 \iff \gcd(k, m) = 1\)</span> and <span class="arithmatex">\(\gcd(k, n) = 1\)</span>. Arrange the numbers as an <span class="arithmatex">\(m \times n\)</span> array:</p>
 <table>
 <thead>
 <tr>
@@ -1179,7 +1195,7 @@
 <p>Fix one such column, i.e. fix <span class="arithmatex">\(r\)</span> such that <span class="arithmatex">\(\gcd(r, n) = 1\)</span>. We check how many elements in this column are coprime to <span class="arithmatex">\(m\)</span> as well.</p>
 </li>
 <li>
-<p>For two different elements <span class="arithmatex">\(k_1 n + r\)</span> and <span class="arithmatex">\(k_2 n + r\)</span>, write <span class="arithmatex">\(k_1 n + r = mq_1 + r_1\)</span> and <span class="arithmatex">\(k_2 n + r = mq_2 + r_2\)</span>. If <span class="arithmatex">\(r_1 = r_2\)</span>, then <span class="arithmatex">\(m \mid (k_1 - k_2)n \Rightarrow m \mid k_1 - k_2\)</span> (since <span class="arithmatex">\(\gcd(m, n) = 1\)</span>) <span class="arithmatex">\(\Rightarrow k_1 = k_2\)</span>.</p>
+<p>For two different elements <span class="arithmatex">\(k_1 n + r\)</span> and <span class="arithmatex">\(k_2 n + r\)</span>, write <span class="arithmatex">\(k_1 n + r = mq_1 + r_1\)</span> and <span class="arithmatex">\(k_2 n + r = mq_2 + r_2\)</span>. If <span class="arithmatex">\(r_1 = r_2\)</span>, then <span class="arithmatex">\(m \mid (k_1 - k_2)n\)</span> <span class="arithmatex">\(\Rightarrow m \mid k_1 - k_2\)</span> (since <span class="arithmatex">\(\gcd(m, n) = 1\)</span>) <span class="arithmatex">\(\Rightarrow k_1 = k_2\)</span>.</p>
 </li>
 <li>
 <p>Therefore, upon division by <span class="arithmatex">\(m\)</span>, the elements <span class="arithmatex">\(r, n + r, \ldots, (m-1)n + r\)</span> produce different remainders. If <span class="arithmatex">\(kn + r = mq + r_1\)</span>, then <span class="arithmatex">\(\gcd(kn + r, m) = \gcd(r_1, m)\)</span>.</p>
@@ -1193,7 +1209,7 @@
 <p class="admonition-title">Lemma</p>
 <p>If <span class="arithmatex">\(p\)</span> is prime, then <span class="arithmatex">\(\varphi(p^\alpha) = p^\alpha - p^{\alpha - 1}\)</span>.</p>
 </div>
-<p><em>Proof.</em> <span class="arithmatex">\(\gcd(k, p^\alpha) \ne 1 \iff p \mid k \iff k = pt\)</span> for some <span class="arithmatex">\(1 \le t \le p^{\alpha-1}\)</span>. Therefore <span class="arithmatex">\(\varphi(p^\alpha) = p^\alpha - p^{\alpha-1}\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
+<p><em>Proof.</em> <span class="arithmatex">\(\gcd(k, p^\alpha) \ne 1\)</span> <span class="arithmatex">\(\iff p \mid k\)</span> <span class="arithmatex">\(\iff k = pt\)</span> for some <span class="arithmatex">\(1 \le t \le p^{\alpha-1}\)</span>. Therefore <span class="arithmatex">\(\varphi(p^\alpha) = p^\alpha - p^{\alpha-1}\)</span>. <span class="arithmatex">\(\blacksquare\)</span></p>
 <div class="admonition abstract">
 <p class="admonition-title">Theorem</p>
 <p>If <span class="arithmatex">\(n \ge 1\)</span>, then</p>
@@ -1215,7 +1231,7 @@
 <p>If <span class="arithmatex">\(d = \gcd(m, n)\)</span>, then <span class="arithmatex">\(\varphi(mn) = \varphi(m)\varphi(n)\left(\dfrac{d}{\varphi(d)}\right)\)</span>.</p>
 </li>
 <li>
-<p><span class="arithmatex">\(a \mid b \Rightarrow \varphi(a) \mid \varphi(b)\)</span>.</p>
+<p><span class="arithmatex">\(a \mid b\)</span> <span class="arithmatex">\(\Rightarrow \varphi(a) \mid \varphi(b)\)</span>.</p>
 </li>
 <li>
 <p>If <span class="arithmatex">\(n \ge 3\)</span>, <span class="arithmatex">\(\varphi(n)\)</span> is even.</p>
@@ -1228,8 +1244,8 @@
 </div>
 <p><em>Proof.</em> Let <span class="arithmatex">\(S = \{1, 2, \ldots, n\}\)</span>. For each <span class="arithmatex">\(d \mid n\)</span>, let <span class="arithmatex">\(A(d) = \{k \in S : \gcd(k, n) = d\}\)</span>. Then</p>
 <div class="arithmatex">\[S = \bigsqcup_{d \mid n} A(d) \;\Rightarrow\; n = \sum_{d \mid n} |A(d)|.\]</div>
-<p>Now <span class="arithmatex">\(\gcd(k, n) = d \iff \gcd\left(\frac{k}{d}, \frac{n}{d}\right) = 1 \Rightarrow |A(d)| = \varphi\left(\frac{n}{d}\right)\)</span>. So</p>
-<div class="arithmatex">\[n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(d). \qquad \blacksquare\]</div>
+<p>Now <span class="arithmatex">\(\gcd(k, n) = d\)</span> <span class="arithmatex">\(\iff \gcd\left(\frac{k}{d}, \frac{n}{d}\right) = 1\)</span> <span class="arithmatex">\(\Rightarrow |A(d)| = \varphi\left(\frac{n}{d}\right)\)</span>. So</p>
+<div class="arithmatex">\[n = \sum_{d \mid n} \varphi\left(\frac{n}{d}\right) = \sum_{d \mid n} \varphi(d). \quad \blacksquare\]</div>
 <h3 id="the-mobius-function">The Möbius function<a class="headerlink" href="#the-mobius-function" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(\mu(1) = 1\)</span>. For <span class="arithmatex">\(n &gt; 1\)</span>, if <span class="arithmatex">\(n = p_1^{\alpha_1} \cdots p_k^{\alpha_k}\)</span>, then</p>
 <div class="arithmatex">\[
@@ -1307,11 +1323,23 @@
 <div class="arithmatex">\[f(n) = \sum_{d \mid n} g(d) \iff g(n) = \sum_{d \mid n} f(d) \, \mu\!\left(\frac{n}{d}\right).\]</div>
 </div>
 <h3 id="other-number-theoretic-functions-sigman-and-taun">Other number-theoretic functions: <span class="arithmatex">\(\sigma(n)\)</span> and <span class="arithmatex">\(\tau(n)\)</span><a class="headerlink" href="#other-number-theoretic-functions-sigman-and-taun" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[\tau(n) = \sum_{d \mid n} 1 = \text{number of positive divisors of } n, \qquad \sigma(n) = \sum_{d \mid n} d = \text{sum of all positive divisors of } n.\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(\tau(n) = \sum_{d \mid n} 1\)</span> = number of positive divisors of <span class="arithmatex">\(n\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sigma(n) = \sum_{d \mid n} d\)</span> = sum of all positive divisors of <span class="arithmatex">\(n\)</span>.</p>
+</li>
+</ul>
 <div class="admonition abstract">
 <p class="admonition-title">Proposition</p>
 <p>If <span class="arithmatex">\(n = p_1^{\alpha_1} \cdots p_r^{\alpha_r}\)</span>, then</p>
-<div class="arithmatex">\[\tau(n) = (\alpha_1 + 1)(\alpha_2 + 1) \cdots (\alpha_r + 1), \qquad \sigma(n) = \frac{p_1^{\alpha_1+1} - 1}{p_1 - 1} \cdot \frac{p_2^{\alpha_2+1} - 1}{p_2 - 1} \cdots \frac{p_r^{\alpha_r+1} - 1}{p_r - 1}.\]</div>
+<div class="arithmatex">\[
+\begin{gathered}
+\tau(n) = (\alpha_1 + 1)(\alpha_2 + 1) \cdots (\alpha_r + 1), \\
+\sigma(n) = \frac{p_1^{\alpha_1+1} - 1}{p_1 - 1} \cdot \frac{p_2^{\alpha_2+1} - 1}{p_2 - 1} \cdots \frac{p_r^{\alpha_r+1} - 1}{p_r - 1}.
+\end{gathered}
+\]</div>
 <p>In particular, both <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(\tau\)</span> are multiplicative.</p>
 </div>
 
